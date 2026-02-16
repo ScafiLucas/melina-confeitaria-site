@@ -1,5 +1,19 @@
 "use client";
 
+import { BookOpen } from "lucide-react";
+
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
+const MENU_PDF_URL = process.env.NEXT_PUBLIC_MENU_PDF || "https://drive.google.com/file/d/1-GtNKvm6eE5LyF66_FqfvavmEEftbppd/view";
+
+// Converte link do Google Drive para visualização direta
+const getDirectPdfUrl = (driveUrl: string) => {
+  const fileIdMatch = driveUrl.match(/\/d\/([^/]+)/);
+  if (fileIdMatch) {
+    return `https://drive.google.com/file/d/${fileIdMatch[1]}/preview`;
+  }
+  return driveUrl;
+};
+
 export default function Hero() {
   const scrollToNext = () => {
     const aboutSection = document.getElementById('sobre');
@@ -47,10 +61,31 @@ export default function Hero() {
           <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#d4af37' }}></div>
         </div>
         
-        <p className="text-base sm:text-lg md:text-xl font-body mb-16 max-w-2xl mx-auto leading-relaxed" style={{ color: '#b8a490' }}>
+        <p className="text-base sm:text-lg md:text-xl font-body mb-10 max-w-2xl mx-auto leading-relaxed" style={{ color: '#b8a490' }}>
           Doces que aquecem o coração e resgatam memórias.<br className="hidden sm:block" />
           Cada receita carrega o carinho e a tradição da nossa família para a sua.
         </p>
+
+        {/* Botões de ação */}
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-3">
+          <a
+            href={getDirectPdfUrl(MENU_PDF_URL)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-chocolate-600 text-chocolate-700 hover:bg-chocolate-50 transition-all font-heading font-medium shadow-sm"
+          >
+            <BookOpen size={18} />
+            Ver Cardápio
+          </a>
+          <a
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white hover:from-chocolate-700 hover:to-chocolate-800 transition-all font-heading font-medium shadow-md"
+          >
+            Encomendar
+          </a>
+        </div>
 
         {/* Indicador de scroll */}
         <button 
