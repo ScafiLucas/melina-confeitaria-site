@@ -73,7 +73,8 @@ export default function Gallery() {
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda personalizada.`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-chocolate-600 text-white hover:bg-chocolate-700 transition-all shadow-lg font-heading font-medium"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-full text-white hover:opacity-90 transition-all shadow-lg font-heading font-medium"
+            style={{ backgroundColor: '#00255F' }}
           >
             Fazer Encomenda Personalizada
           </a>

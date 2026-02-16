@@ -104,7 +104,8 @@ export default function Navbar() {
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center justify-center px-4 py-2 rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white hover:from-chocolate-700 hover:to-chocolate-800 transition-all font-heading font-medium shadow-md"
+              className="hidden md:inline-flex items-center justify-center px-4 py-2 rounded-full text-white hover:opacity-90 transition-all font-heading font-medium shadow-md"
+              style={{ backgroundColor: '#00255F' }}
             >
               Encomendar
             </a>
@@ -167,7 +168,8 @@ export default function Navbar() {
                   href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex px-4 py-2 rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white font-medium"
+                  className="inline-flex px-4 py-2 rounded-full text-white font-medium"
+                  style={{ backgroundColor: '#00255F' }}
                 >
                   Encomendar
                 </a>
