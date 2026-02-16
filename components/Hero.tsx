@@ -1,4 +1,4 @@
-const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/seu-link";
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
 
 export default function Hero() {
   return (
@@ -60,7 +60,7 @@ export default function Hero() {
             </svg>
           </a>
           <a
-            href={CALENDLY_URL}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-10 py-4 text-base font-medium tracking-wide border-2 border-chocolate-800 text-chocolate-800 hover:bg-chocolate-800 hover:text-white transition-all duration-300"

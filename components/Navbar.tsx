@@ -2,12 +2,18 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, BookOpen, MessageCircle, Instagram } from "lucide-react";
+import { Menu, X, BookOpen, Instagram } from "lucide-react";
 import Image from "next/image";
 
-const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/seu-link";
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5511999999999";
-const INSTAGRAM_URL = process.env.NEXT_PUBLIC_INSTAGRAM || "https://instagram.com/melinaconfeitaria";
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
+const INSTAGRAM_URL = process.env.NEXT_PUBLIC_INSTAGRAM || "https://www.instagram.com/melina_confeitariaafetiva/";
+
+// Ícone customizado de WhatsApp
+const WhatsAppIcon = ({ size = 22 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+  </svg>
+);
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
@@ -58,13 +64,13 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             {/* Botões de Redes Sociais - Ícones Premium */}
             <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex items-center justify-center w-9 h-9 text-chocolate-600 hover:text-green-600 transition-colors"
               aria-label="WhatsApp"
             >
-              <MessageCircle size={22} strokeWidth={1.5} />
+              <WhatsAppIcon size={22} />
             </a>
             <a
               href={INSTAGRAM_URL}
@@ -84,7 +90,7 @@ export default function Navbar() {
               Ver Cardápio
             </a>
             <a
-              href={CALENDLY_URL}
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:inline-flex items-center justify-center px-4 py-2 rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white hover:from-chocolate-700 hover:to-chocolate-800 transition-all font-medium shadow-md"
@@ -118,13 +124,13 @@ export default function Navbar() {
               ))}
               <li className="flex gap-4 pt-2">
                 <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-10 h-10 text-chocolate-700 hover:text-green-600"
                   aria-label="WhatsApp"
                 >
-                  <MessageCircle size={24} strokeWidth={1.5} />
+                  <WhatsAppIcon size={24} />
                 </a>
                 <a
                   href={INSTAGRAM_URL}
@@ -146,7 +152,7 @@ export default function Navbar() {
                   Ver Cardápio
                 </a>
                 <a
-                  href={CALENDLY_URL}
+                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex px-4 py-2 rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white font-medium"

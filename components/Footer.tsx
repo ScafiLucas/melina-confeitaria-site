@@ -1,7 +1,8 @@
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
 import Link from "next/link";
 
-const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/seu-link";
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
+const INSTAGRAM_URL = process.env.NEXT_PUBLIC_INSTAGRAM || "https://www.instagram.com/melina_confeitariaafetiva/";
 
 const footerLinks = {
   company: [
@@ -10,7 +11,7 @@ const footerLinks = {
     { label: "Contato", href: "#contato" },
   ],
   social: [
-    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Instagram, href: INSTAGRAM_URL, label: "Instagram" },
     { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
   ],
@@ -33,7 +34,7 @@ export default function Footer() {
               Doces feitos com amor e tradição familiar. Transformando momentos especiais em memórias inesquecíveis.
             </p>
             <a
-              href={CALENDLY_URL}
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-amber-500 text-white hover:bg-amber-600 transition-colors font-medium shadow-lg"
@@ -75,10 +76,12 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
                 <a
-                  href="tel:+5511999999999"
+                  href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-craft-300 hover:text-white transition-colors"
                 >
-                  (11) 99999-9999
+                  (19) 97119-3794
                 </a>
               </li>
               <li className="flex items-start gap-3">
