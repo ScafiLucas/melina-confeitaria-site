@@ -72,8 +72,8 @@ export default function Hero() {
             href={getDirectPdfUrl(MENU_PDF_URL)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 text-chocolate-700 hover:bg-chocolate-50 transition-all font-heading font-medium shadow-sm"
-            style={{ borderColor: '#00255F' }}
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 hover:bg-chocolate-50 transition-all font-heading font-medium shadow-sm"
+            style={{ borderColor: '#00255F', color: '#00255F' }}
           >
             <BookOpen size={18} />
             Ver Cardápio
