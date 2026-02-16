@@ -41,10 +41,13 @@ export default function Testimonials() {
           {testimonials.map((testimonial, idx) => (
             <div
               key={idx}
-              className="relative p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-chocolate-200"
-              style={{ backgroundColor: '#f1eee9' }}
+              className="relative p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border"
+              style={{ 
+                background: 'linear-gradient(135deg, #ebe6dd 0%, #e0d7c9 100%)',
+                borderColor: '#d4c5b0'
+              }}
             >
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-chocolate-200" />
+              <Quote className="absolute top-4 right-4 w-8 h-8" style={{ color: '#8f7054', opacity: 0.4 }} />
               
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -59,18 +62,13 @@ export default function Testimonials() {
                 "{testimonial.text}"
               </p>
 
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-chocolate-500 to-amber-500 flex items-center justify-center text-white font-bold text-lg shadow-md">
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div>
-                  <p className="font-heading font-semibold" style={{ color: '#00255F' }}>
-                    {testimonial.name}
-                  </p>
-                  <p className="text-sm font-body text-chocolate-600">
-                    Cliente Melina
-                  </p>
-                </div>
+              <div>
+                <p className="font-heading font-semibold" style={{ color: '#00255F' }}>
+                  {testimonial.name}
+                </p>
+                <p className="text-sm font-body text-chocolate-600">
+                  Cliente Melina
+                </p>
               </div>
             </div>
           ))}
