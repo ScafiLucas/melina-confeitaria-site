@@ -28,13 +28,22 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center bg-white"
     >
-      {/* Padrão sutil de fundo */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle, rgba(139, 111, 71, 0.1) 1px, transparent 1px)',
-          backgroundSize: '40px 40px'
-        }}/>
-      </div>
+      {/* Imagem de fundo - adicionar URL da imagem aqui */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://res.cloudinary.com/db8aa3e8s/image/upload/v1771271607/hero2_mvem6y.png')`, // Adicionar URL da imagem aqui
+          opacity: 0.25
+        }}
+      />
+      
+      {/* Máscara de fade lateral (radial do centro para as bordas) */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(ellipse 70% 80% at center, transparent 0%, transparent 40%, rgba(255, 255, 255, 0.7) 70%, white 100%)'
+        }}
+      />
       
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         {/* Linha decorativa superior */}
