@@ -81,10 +81,10 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
                 <a
-                  href="mailto:contato@melinaconfeitaria.com"
+                  href="mailto:melinaconfeitariaafetiva@gmail.com"
                   className="text-craft-300 hover:text-white transition-colors"
                 >
-                  contato@melinaconfeitaria.com
+                  melinaconfeitariaafetiva@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -101,7 +101,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
                 <span className="text-craft-300">
-                  São Paulo, SP
+                  Barão Geraldo - Campinas/SP
                 </span>
               </li>
             </ul>
