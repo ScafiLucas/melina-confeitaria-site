@@ -83,8 +83,7 @@ export default function Testimonials() {
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer minha primeira encomenda.`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-full text-white hover:opacity-90 transition-all shadow-lg font-heading font-medium"
-            style={{ backgroundColor: '#00255F' }}
+            className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white hover:from-chocolate-700 hover:to-chocolate-800 transition-all shadow-lg font-heading font-medium"
           >
             Faça sua Primeira Encomenda
           </a>
