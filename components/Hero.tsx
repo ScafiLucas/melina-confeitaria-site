@@ -16,11 +16,11 @@ export default function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         {/* Linha decorativa superior */}
         <div className="flex items-center justify-center gap-4 mb-8">
-          <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#b8a490]"></div>
-          <span className="text-sm uppercase tracking-[0.25em] font-heading" style={{ color: '#b8a490' }}>
+          <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#d4af37]"></div>
+          <span className="text-sm uppercase tracking-[0.25em] font-heading" style={{ color: '#d4af37' }}>
             Confeitaria Artesanal
           </span>
-          <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#b8a490]"></div>
+          <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#d4af37]"></div>
         </div>
         
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading mb-6 leading-[1.1] tracking-[0.08em] uppercase" style={{ color: '#00255F' }}>
@@ -38,7 +38,7 @@ export default function Hero() {
           <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#d4af37' }}></div>
         </div>
         
-        <p className="text-base sm:text-lg md:text-xl font-body mb-16 max-w-2xl mx-auto leading-relaxed" style={{ color: '#8f7054' }}>
+        <p className="text-base sm:text-lg md:text-xl font-body mb-16 max-w-2xl mx-auto leading-relaxed" style={{ color: '#5a432b' }}>
           Doces que aquecem o coração e resgatam memórias.<br className="hidden sm:block" />
           Cada receita carrega o carinho e a tradição da nossa família para a sua.
         </p>
