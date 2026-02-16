@@ -16,13 +16,13 @@ export default function Hero() {
         {/* Linha decorativa superior */}
         <div className="flex items-center justify-center gap-4 mb-8">
           <div className="h-px w-12 bg-gradient-to-r from-transparent to-chocolate-300"></div>
-          <span className="text-sm uppercase tracking-[0.3em] text-chocolate-600 font-heading font-normal">
+          <span className="text-sm uppercase tracking-[0.25em] text-chocolate-600 font-heading">
             Confeitaria Artesanal
           </span>
           <div className="h-px w-12 bg-gradient-to-l from-transparent to-chocolate-300"></div>
         </div>
         
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-bold text-chocolate-900 mb-6 leading-[1.1] tracking-[0.05em] uppercase">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading text-chocolate-900 mb-6 leading-[1.1] tracking-[0.08em] uppercase">
           Melina
         </h1>
         
