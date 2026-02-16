@@ -1,4 +1,13 @@
+"use client";
+
 export default function Hero() {
+  const scrollToNext = () => {
+    const aboutSection = document.getElementById('sobre');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section
       id="hero"
@@ -23,7 +32,7 @@ export default function Hero() {
           <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#d4af37]"></div>
         </div>
         
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading mb-6 leading-[1.1] tracking-[0.08em] uppercase" style={{ color: '#00255F' }}>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-thin mb-6 leading-[1.1] tracking-[0.08em] uppercase" style={{ color: '#00255F' }}>
           Melina
         </h1>
         
@@ -44,7 +53,11 @@ export default function Hero() {
         </p>
 
         {/* Indicador de scroll */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <button 
+          onClick={scrollToNext}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer hover:opacity-70 transition-opacity"
+          aria-label="Rolar para próxima seção"
+        >
           <svg 
             className="w-6 h-6" 
             fill="none" 
@@ -53,7 +66,7 @@ export default function Hero() {
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
-        </div>
+        </button>
       </div>
     </section>
   );

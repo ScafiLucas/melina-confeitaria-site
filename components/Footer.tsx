@@ -1,3 +1,5 @@
+"use client";
+
 import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 import Link from "next/link";
 
@@ -37,7 +39,8 @@ export default function Footer() {
   return (
     <footer
       id="contato"
-      className="bg-gradient-to-br from-chocolate-800 to-chocolate-950 text-white"
+      className="text-white"
+      style={{ background: 'linear-gradient(135deg, #00255F, #001a42)' }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
@@ -51,7 +54,8 @@ export default function Footer() {
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-amber-500 text-white hover:bg-amber-600 transition-colors font-heading font-medium shadow-lg"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-full text-white hover:opacity-90 transition-all font-heading font-medium shadow-lg"
+              style={{ background: 'linear-gradient(to right, #d4af37, #f4e5b8)' }}
             >
               Fazer Encomenda
             </a>
@@ -79,7 +83,7 @@ export default function Footer() {
             <h4 className="text-lg font-heading font-semibold mb-4 text-craft-100">Contato</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                <Mail className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#d4af37' }} />
                 <a
                   href="mailto:melinaconfeitariaafetiva@gmail.com"
                   className="font-body text-craft-300 hover:text-white transition-colors"
@@ -88,7 +92,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                <Phone className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#d4af37' }} />
                 <a
                   href={`https://wa.me/${WHATSAPP_NUMBER}`}
                   target="_blank"
@@ -99,7 +103,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#d4af37' }} />
                 <span className="font-body text-craft-300">
                   Barão Geraldo - Campinas/SP
                 </span>
@@ -109,7 +113,7 @@ export default function Footer() {
         </div>
 
         {/* Redes sociais e copyright */}
-        <div className="pt-8 border-t border-chocolate-700">
+        <div className="pt-8 border-t" style={{ borderColor: 'rgba(212, 175, 55, 0.3)' }}>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-body text-craft-300 text-sm">
               © {currentYear} Melina Confeitaria. Feito com amor e muito carinho.
@@ -124,7 +128,16 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center p-2 rounded-lg text-craft-300 hover:text-white hover:bg-chocolate-700 transition-all"
+                    className="flex items-center justify-center p-2 rounded-lg transition-all"
+                    style={{ 
+                      color: '#d4af37',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = 'rgba(212, 175, 55, 0.2)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                    }}
                     aria-label={social.label}
                   >
                     {isLucideIcon ? (
