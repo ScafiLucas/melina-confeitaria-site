@@ -45,8 +45,8 @@ export default function About() {
             <ul className="space-y-4">
               {features.map((feature, idx) => (
                 <li key={idx} className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-chocolate-100 flex items-center justify-center">
-                    <feature.icon className="w-5 h-5 text-chocolate-700" />
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: '#e8dfd5' }}>
+                    <feature.icon className="w-5 h-5 text-chocolate-800" />
                   </div>
                   <span className="font-body text-chocolate-800 pt-2">{feature.text}</span>
                 </li>

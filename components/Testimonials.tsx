@@ -32,8 +32,8 @@ export default function Testimonials() {
             O Que Nossos Clientes{" "}
             <span style={{ color: '#b8a490' }}>Dizem</span>
           </h2>
-          <p className="text-lg font-body text-chocolate-700 max-w-2xl mx-auto">
-            Cada depoimento é um pedacinho da alegria que sentimos ao compartilhar nossos doces
+          <p className="text-lg font-body text-chocolate-700 max-w-3xl mx-auto">
+            Depoimentos de quem já provou nosso carinho em forma de doce.
           </p>
         </div>
 
