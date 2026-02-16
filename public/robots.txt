@@ -1,0 +1,23 @@
+# robots.txt para Melina Confeitaria Afetiva
+
+# Permitir todos os crawlers
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://melinaconfeitaria.com/sitemap.xml
+
+# Crawl-delay para evitar sobrecarga
+Crawl-delay: 1
+
+# Bloquear arquivos desnecessários
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Permitir Googlebot e Bingbot explicitamente
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

@@ -39,15 +39,15 @@ export default function Footer() {
   return (
     <footer
       id="contato"
-      className="text-white"
-      style={{ background: 'linear-gradient(135deg, #00255F, #001a42)' }}
+      className="text-chocolate-900"
+      style={{ background: 'linear-gradient(135deg, #f0ebe3, #dfd3c3)' }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo e descrição */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-heading font-bold text-white mb-4">Melina Confeitaria</h3>
-            <p className="font-body text-craft-200 mb-6">
+            <h3 className="text-2xl font-heading font-bold text-chocolate-900 mb-4">Melina Confeitaria</h3>
+            <p className="font-body text-chocolate-700 mb-6">
               Doces feitos com amor e tradição familiar. Transformando momentos especiais em memórias inesquecíveis.
             </p>
             <a
@@ -55,7 +55,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 rounded-full text-white hover:opacity-90 transition-all font-heading font-medium shadow-lg"
-              style={{ background: 'linear-gradient(to right, #d4af37, #f4e5b8)' }}
+              style={{ background: 'linear-gradient(135deg, #6f5436, #4a3724)' }}
             >
               Fazer Encomenda
             </a>
@@ -63,13 +63,13 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="text-lg font-heading font-semibold mb-4 text-craft-100">Links Rápidos</h4>
+            <h4 className="text-lg font-heading font-semibold mb-4 text-chocolate-900">Links Rápidos</h4>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="font-body text-craft-300 hover:text-white transition-colors"
+                    className="font-body text-chocolate-700 hover:text-chocolate-900 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -80,31 +80,31 @@ export default function Footer() {
 
           {/* Contato */}
           <div>
-            <h4 className="text-lg font-heading font-semibold mb-4 text-craft-100">Contato</h4>
+            <h4 className="text-lg font-heading font-semibold mb-4 text-chocolate-900">Contato</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <Mail className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#d4af37' }} />
+                <Mail className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#6f5436' }} />
                 <a
                   href="mailto:melinaconfeitariaafetiva@gmail.com"
-                  className="font-body text-craft-300 hover:text-white transition-colors"
+                  className="font-body text-chocolate-700 hover:text-chocolate-900 transition-colors"
                 >
                   melinaconfeitariaafetiva@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <Phone className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#d4af37' }} />
+                <Phone className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#6f5436' }} />
                 <a
                   href={`https://wa.me/${WHATSAPP_NUMBER}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-body text-craft-300 hover:text-white transition-colors"
+                  className="font-body text-chocolate-700 hover:text-chocolate-900 transition-colors"
                 >
                   (19) 97119-3794
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#d4af37' }} />
-                <span className="font-body text-craft-300">
+                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#6f5436' }} />
+                <span className="font-body text-chocolate-700">
                   Barão Geraldo - Campinas/SP
                 </span>
               </li>
@@ -113,9 +113,9 @@ export default function Footer() {
         </div>
 
         {/* Redes sociais e copyright */}
-        <div className="pt-8 border-t" style={{ borderColor: 'rgba(212, 175, 55, 0.3)' }}>
+        <div className="pt-8 border-t border-chocolate-300">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="font-body text-craft-300 text-sm">
+            <p className="font-body text-chocolate-700 text-sm">
               © {currentYear} Melina Confeitaria. Feito com amor e muito carinho.
             </p>
             <div className="flex items-center gap-4">
@@ -130,10 +130,10 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center p-2 rounded-lg transition-all"
                     style={{ 
-                      color: '#d4af37',
+                      color: '#6f5436',
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = 'rgba(212, 175, 55, 0.2)';
+                      e.currentTarget.style.backgroundColor = 'rgba(111, 84, 54, 0.15)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.backgroundColor = 'transparent';
