@@ -65,7 +65,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-craft-300 hover:text-white transition-colors"
+                    className="font-body text-craft-300 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -82,7 +82,7 @@ export default function Footer() {
                 <Mail className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
                 <a
                   href="mailto:melinaconfeitariaafetiva@gmail.com"
-                  className="text-craft-300 hover:text-white transition-colors"
+                  className="font-body text-craft-300 hover:text-white transition-colors"
                 >
                   melinaconfeitariaafetiva@gmail.com
                 </a>
@@ -93,14 +93,14 @@ export default function Footer() {
                   href={`https://wa.me/${WHATSAPP_NUMBER}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-craft-300 hover:text-white transition-colors"
+                  className="font-body text-craft-300 hover:text-white transition-colors"
                 >
                   (19) 97119-3794
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
-                <span className="text-craft-300">
+                <span className="font-body text-craft-300">
                   Barão Geraldo - Campinas/SP
                 </span>
               </li>
