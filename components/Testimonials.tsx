@@ -1,5 +1,7 @@
 import { Star, Quote } from "lucide-react";
 
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
+
 const testimonials = [
   {
     name: "Ana Paula Silva",
@@ -78,7 +80,9 @@ export default function Testimonials() {
             Quer fazer parte dessa família?
           </p>
           <a
-            href="#contato"
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer minha primeira encomenda.`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white hover:from-chocolate-700 hover:to-chocolate-800 transition-all shadow-lg font-medium"
           >
             Faça sua Primeira Encomenda

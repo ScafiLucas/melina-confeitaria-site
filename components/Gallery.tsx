@@ -1,3 +1,5 @@
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
+
 const images = [
   {
     url: "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=800&auto=format&fit=crop",
@@ -68,7 +70,9 @@ export default function Gallery() {
             Trabalhamos com encomendas personalizadas para tornar seu momento ainda mais especial
           </p>
           <a
-            href="#contato"
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda personalizada.`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-chocolate-600 text-white hover:bg-chocolate-700 transition-all shadow-lg font-medium"
           >
             Fazer Encomenda Personalizada
