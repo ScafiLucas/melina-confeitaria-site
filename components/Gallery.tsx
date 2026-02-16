@@ -2,28 +2,28 @@ const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
 
 const images = [
   {
-    url: "https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=800&auto=format&fit=crop",
-    alt: "Bolo de chocolate artesanal",
+    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771283317/WhatsApp_Image_2026-02-16_at_18.55.33_gfgc3s.jpg",
+    alt: "Doces e Bolos Festivos",
   },
   {
-    url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=800&auto=format&fit=crop",
-    alt: "Brigadeiros gourmet sortidos",
+    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771283318/WhatsApp_Image_2026-02-16_at_18.55.27_cxlnpv.jpg",
+    alt: "Presentes e Mimos",
   },
   {
-    url: "https://images.unsplash.com/photo-1586985289906-406988974504?w=800&auto=format&fit=crop",
-    alt: "Cupcakes decorados com carinho",
+    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771283316/WhatsApp_Image_2026-02-16_at_18.55.36_g8ozht.jpg",
+    alt: "Bolos para o Dia-a-Dia",
   },
   {
-    url: "https://images.unsplash.com/photo-1557925923-cd4648e211a0?w=800&auto=format&fit=crop",
-    alt: "Torta de frutas caseira",
+    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771283938/WhatsApp_Image_2026-02-16_at_20.18.24_ee5lav.jpg",
+    alt: "Cookies",
   },
   {
-    url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop",
-    alt: "Doces finos para festas",
+    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771283842/WhatsApp_Image_2026-02-16_at_17.16.53_cadipk.jpg",
+    alt: "Bolos Especiais",
   },
   {
-    url: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&auto=format&fit=crop",
-    alt: "Bolo de aniversário personalizado",
+    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771283316/WhatsApp_Image_2026-02-16_at_18.55.37_lybc7t.jpg",
+    alt: "Docinhos",
   },
 ];
 
