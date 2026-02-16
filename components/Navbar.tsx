@@ -149,8 +149,7 @@ export default function Navbar() {
                   href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex px-4 py-2 rounded-full text-white font-medium"
-                  style={{ backgroundColor: '#00255F' }}
+                  className="inline-flex px-4 py-2 rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white font-medium"
                 >
                   Encomendar
                 </a>
