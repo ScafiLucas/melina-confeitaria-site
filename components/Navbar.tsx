@@ -42,7 +42,7 @@ export default function Navbar() {
           {/* Logo - Pronto para receber PNG */}
           <Link
             href="#"
-            className="flex items-center gap-3"
+            className="flex items-center"
           >
             <div className="relative w-10 h-10">
               {/* Substitua /logo.svg por /logo.png quando adicionar seu logo */}
@@ -55,7 +55,6 @@ export default function Navbar() {
                 priority
               />
             </div>
-            <span className="text-xl font-bold text-chocolate-800">Melina Confeitaria</span>
           </Link>
 
           <ul className="hidden md:flex items-center gap-8">
@@ -63,7 +62,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-chocolate-700 hover:text-chocolate-900 transition-colors font-heading font-medium"
+                  className="text-chocolate-800 hover:text-chocolate-900 transition-colors font-heading font-medium"
                 >
                   {link.label}
                 </Link>
@@ -128,7 +127,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block text-chocolate-700 hover:text-chocolate-900"
+                    className="block text-chocolate-800 hover:text-chocolate-900"
                   >
                     {link.label}
                   </Link>

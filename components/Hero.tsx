@@ -33,9 +33,9 @@ export default function Hero() {
 
         {/* Separador decorativo */}
         <div className="flex items-center justify-center gap-3 mb-10">
-          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#b8a490' }}></div>
-          <div className="w-16 h-px" style={{ background: 'linear-gradient(to right, #b8a490, #d4af8a, #b8a490)' }}></div>
-          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#b8a490' }}></div>
+          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#d4af37' }}></div>
+          <div className="w-16 h-px" style={{ background: 'linear-gradient(to right, #d4af37, #f4e5b8, #d4af37)' }}></div>
+          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#d4af37' }}></div>
         </div>
         
         <p className="text-base sm:text-lg md:text-xl font-body mb-16 max-w-2xl mx-auto leading-relaxed" style={{ color: '#8f7054' }}>
