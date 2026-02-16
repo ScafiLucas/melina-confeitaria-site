@@ -63,7 +63,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-chocolate-700 hover:text-chocolate-900 transition-colors font-medium"
+                  className="text-chocolate-700 hover:text-chocolate-900 transition-colors font-heading font-medium"
                 >
                   {link.label}
                 </Link>
@@ -96,7 +96,7 @@ export default function Navbar() {
               href={getDirectPdfUrl(MENU_PDF_URL)}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border-2 border-chocolate-600 text-chocolate-700 hover:bg-chocolate-50 transition-all font-medium"
+              className="hidden md:inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border-2 border-chocolate-600 text-chocolate-700 hover:bg-chocolate-50 transition-all font-heading font-medium"
             >
               <BookOpen size={18} />
               Ver Cardápio
@@ -105,7 +105,7 @@ export default function Navbar() {
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center justify-center px-4 py-2 rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white hover:from-chocolate-700 hover:to-chocolate-800 transition-all font-medium shadow-md"
+              className="hidden md:inline-flex items-center justify-center px-4 py-2 rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white hover:from-chocolate-700 hover:to-chocolate-800 transition-all font-heading font-medium shadow-md"
             >
               Encomendar
             </a>

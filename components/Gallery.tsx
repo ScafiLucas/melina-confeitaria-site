@@ -35,11 +35,11 @@ export default function Gallery() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-chocolate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-chocolate-900 mb-4">
             Galeria de{" "}
             <span className="text-chocolate-600">Delícias</span>
           </h2>
-          <p className="text-lg text-chocolate-700 max-w-2xl mx-auto">
+          <p className="text-lg font-body text-chocolate-700 max-w-2xl mx-auto">
             Cada criação é única e especial. Confira alguns dos nossos doces que levam 
             afeto e sabor para momentos inesquecíveis.
           </p>
@@ -66,14 +66,14 @@ export default function Gallery() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-chocolate-600 italic mb-6">
+          <p className="font-body text-chocolate-600 italic mb-6">
             Trabalhamos com encomendas personalizadas para tornar seu momento ainda mais especial
           </p>
           <a
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda personalizada.`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-chocolate-600 text-white hover:bg-chocolate-700 transition-all shadow-lg font-medium"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-chocolate-600 text-white hover:bg-chocolate-700 transition-all shadow-lg font-heading font-medium"
           >
             Fazer Encomenda Personalizada
           </a>

@@ -28,16 +28,16 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-chocolate-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-chocolate-900 mb-6">
               Nossa História de{" "}
               <span className="text-chocolate-600">Afeto</span>
             </h2>
-            <p className="text-lg text-chocolate-700 mb-6">
+            <p className="text-lg font-body text-chocolate-700 mb-6">
               A Melina Confeitaria nasceu do desejo de compartilhar o sabor das receitas que sempre 
               trouxeram alegria e união para nossa família. Cada doce que preparamos carrega consigo 
               memórias afetivas, o aroma da casa da vovó e o carinho de quem cozinha com o coração.
             </p>
-            <p className="text-lg text-chocolate-700 mb-8">
+            <p className="text-lg font-body text-chocolate-700 mb-8">
               Acreditamos que a verdadeira confeitaria vai além do sabor - ela cria momentos, 
               fortalece laços e aquece a alma. Aqui, cada pedido é tratado com atenção especial, 
               como se estivéssemos preparando para alguém da nossa própria família.
@@ -48,7 +48,7 @@ export default function About() {
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-chocolate-100 flex items-center justify-center">
                     <feature.icon className="w-5 h-5 text-chocolate-700" />
                   </div>
-                  <span className="text-chocolate-800 pt-2">{feature.text}</span>
+                  <span className="font-body text-chocolate-800 pt-2">{feature.text}</span>
                 </li>
               ))}
             </ul>
@@ -63,7 +63,7 @@ export default function About() {
               />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-craft-50 border-2 border-chocolate-200 rounded-2xl shadow-xl p-6 max-w-xs">
-              <p className="text-sm text-chocolate-700 italic">
+              <p className="text-sm font-body text-chocolate-700 italic">
                 "O amor é o ingrediente secreto que torna tudo mais gostoso"
               </p>
             </div>

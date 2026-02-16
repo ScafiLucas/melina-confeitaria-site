@@ -28,11 +28,11 @@ export default function Testimonials() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-chocolate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-chocolate-900 mb-4">
             O Que Nossos Clientes{" "}
             <span className="text-chocolate-600">Dizem</span>
           </h2>
-          <p className="text-lg text-chocolate-700 max-w-2xl mx-auto">
+          <p className="text-lg font-body text-chocolate-700 max-w-2xl mx-auto">
             Cada depoimento é um pedacinho da alegria que sentimos ao compartilhar nossos doces
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              <p className="text-chocolate-800 mb-6 italic">
+              <p className="font-body text-chocolate-800 mb-6 italic">
                 "{testimonial.text}"
               </p>
 
@@ -63,10 +63,10 @@ export default function Testimonials() {
                   {testimonial.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-semibold text-chocolate-900">
+                  <p className="font-heading font-semibold text-chocolate-900">
                     {testimonial.name}
                   </p>
-                  <p className="text-sm text-chocolate-600">
+                  <p className="text-sm font-body text-chocolate-600">
                     Cliente Melina
                   </p>
                 </div>
@@ -76,14 +76,14 @@ export default function Testimonials() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-chocolate-700 mb-4">
+          <p className="font-body text-chocolate-700 mb-4">
             Quer fazer parte dessa família?
           </p>
           <a
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer minha primeira encomenda.`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white hover:from-chocolate-700 hover:to-chocolate-800 transition-all shadow-lg font-medium"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white hover:from-chocolate-700 hover:to-chocolate-800 transition-all shadow-lg font-heading font-medium"
           >
             Faça sua Primeira Encomenda
           </a>

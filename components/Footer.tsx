@@ -43,15 +43,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo e descrição */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold text-white mb-4">Melina Confeitaria</h3>
-            <p className="text-craft-200 mb-6">
+            <h3 className="text-2xl font-heading font-bold text-white mb-4">Melina Confeitaria</h3>
+            <p className="font-body text-craft-200 mb-6">
               Doces feitos com amor e tradição familiar. Transformando momentos especiais em memórias inesquecíveis.
             </p>
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-amber-500 text-white hover:bg-amber-600 transition-colors font-medium shadow-lg"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-amber-500 text-white hover:bg-amber-600 transition-colors font-heading font-medium shadow-lg"
             >
               Fazer Encomenda
             </a>
@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-craft-100">Links Rápidos</h4>
+            <h4 className="text-lg font-heading font-semibold mb-4 text-craft-100">Links Rápidos</h4>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
@@ -76,7 +76,7 @@ export default function Footer() {
 
           {/* Contato */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-craft-100">Contato</h4>
+            <h4 className="text-lg font-heading font-semibold mb-4 text-craft-100">Contato</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
@@ -111,7 +111,7 @@ export default function Footer() {
         {/* Redes sociais e copyright */}
         <div className="pt-8 border-t border-chocolate-700">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-craft-300 text-sm">
+            <p className="font-body text-craft-300 text-sm">
               © {currentYear} Melina Confeitaria. Feito com amor e muito carinho.
             </p>
             <div className="flex items-center gap-4">

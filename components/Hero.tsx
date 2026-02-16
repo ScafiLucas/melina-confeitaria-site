@@ -37,7 +37,7 @@ export default function Hero() {
           <div className="w-2 h-2 rounded-full bg-amber-500"></div>
         </div>
         
-        <p className="text-base sm:text-lg md:text-xl text-chocolate-700 mb-16 max-w-2xl mx-auto leading-relaxed font-light">
+        <p className="text-base sm:text-lg md:text-xl font-body text-chocolate-700 mb-16 max-w-2xl mx-auto leading-relaxed">
           Doces que aquecem o coração e resgatam memórias.<br className="hidden sm:block" />
           Cada receita carrega o carinho e a tradição da nossa família para a sua.
         </p>
