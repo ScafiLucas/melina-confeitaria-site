@@ -1,4 +1,4 @@
-# 🧁 Melina Confeitaria Afetiva
+# Melina Confeitaria Afetiva
 
 Site da Melina Confeitaria - Doces feitos com amor e tradição familiar. Construído com Next.js 16, TypeScript e Tailwind CSS.
 
@@ -6,9 +6,9 @@ Site da Melina Confeitaria - Doces feitos com amor e tradição familiar. Constr
 
 - **Next.js 16.1.6** - Framework React
 - **TypeScript** - Tipagem estática
-- **Tailwind CSS** - Estilização
+- **Tailwind CSS** - Estilização com paleta craft & chocolate
 - **Lucide React** - Ícones
-- **Dark Mode** - Tema claro/escuro
+- **Next/Image** - Otimização de imagens
 
 ## 📦 Instalação
 
@@ -51,17 +51,30 @@ npm start
 
 ## ⚙️ Configuração
 
-1. Copie `.env.example` para `.env`
-2. Configure suas variáveis de ambiente
-3. Personalize o conteúdo nos componentes
-4. Ajuste as cores no `tailwind.config.ts`
+1. **Variáveis de Ambiente**
+   - Copie `.env.example` para `.env`
+   - Configure:
+     - `NEXT_PUBLIC_CALENDLY_URL` - Link do Calendly
+     - `NEXT_PUBLIC_WHATSAPP` - Número do WhatsApp (formato: 5511999999999)
+     - `NEXT_PUBLIC_INSTAGRAM` - URL do Instagram
+
+2. **Logo**
+   - Substitua `/public/logo.svg` por seu logo em PNG
+   - Formato recomendado: PNG com fundo transparente
+   - Dimensões: 200x200px ou maior (será redimensionado automaticamente)
+   - Atualize o caminho em `components/Navbar.tsx` de `/logo.svg` para `/logo.png`
+
+3. **Personalização**
+   - Ajuste cores em `tailwind.config.ts` (paleta craft & chocolate)
+   - Modifique textos nos componentes
+   - Atualize metadata em `app/layout.tsx`
 
 ## 📝 Personalização
 
-- Edite o conteúdo em cada componente
-- Ajuste as cores em `tailwind.config.ts`
-- Modifique metadata em `app/layout.tsx`
-- Adicione suas imagens em `public/`
+- **Cores**: Edite `tailwind.config.ts` para ajustar paleta craft/chocolate
+- **Conteúdo**: Atualize textos em cada componente
+- **Imagens**: Adicione suas fotos de produtos na galeria
+- **Metadata**: Configure SEO em `app/layout.tsx`
 
 ## 📄 Licença
 

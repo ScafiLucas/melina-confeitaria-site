@@ -64,7 +64,7 @@ export default function About() {
             </div>
             <div className="absolute -bottom-6 -right-6 bg-craft-50 border-2 border-chocolate-200 rounded-2xl shadow-xl p-6 max-w-xs">
               <p className="text-sm text-chocolate-700 italic">
-                "O amor é o ingrediente secreto que torna tudo mais gostoso" ❤️
+                "O amor é o ingrediente secreto que torna tudo mais gostoso"
               </p>
             </div>
           </div>

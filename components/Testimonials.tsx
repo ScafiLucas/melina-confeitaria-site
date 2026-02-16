@@ -26,9 +26,6 @@ export default function Testimonials() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-block mb-4">
-            <span className="text-4xl">💖</span>
-          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-chocolate-900 mb-4">
             O Que Nossos Clientes{" "}
             <span className="text-chocolate-600">Dizem</span>
@@ -78,7 +75,7 @@ export default function Testimonials() {
 
         <div className="mt-12 text-center">
           <p className="text-chocolate-700 mb-4">
-            Quer fazer parte dessa família? ❤️
+            Quer fazer parte dessa família?
           </p>
           <a
             href="#contato"

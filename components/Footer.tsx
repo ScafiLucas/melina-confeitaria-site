@@ -28,10 +28,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo e descrição */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-3xl">🧁</span>
-              <h3 className="text-2xl font-bold text-white">Melina Confeitaria</h3>
-            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">Melina Confeitaria</h3>
             <p className="text-craft-200 mb-6">
               Doces feitos com amor e tradição familiar. Transformando momentos especiais em memórias inesquecíveis.
             </p>
@@ -41,7 +38,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-amber-500 text-white hover:bg-amber-600 transition-colors font-medium shadow-lg"
             >
-              💌 Fazer Encomenda
+              Fazer Encomenda
             </a>
           </div>
 
@@ -98,7 +95,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-chocolate-700">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-craft-300 text-sm">
-              © {currentYear} Melina Confeitaria. Feito com ❤️ e muito carinho.
+              © {currentYear} Melina Confeitaria. Feito com amor e muito carinho.
             </p>
             <div className="flex items-center gap-4">
               {footerLinks.social.map((social) => (
