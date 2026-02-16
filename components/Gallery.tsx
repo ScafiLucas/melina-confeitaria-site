@@ -31,7 +31,7 @@ export default function Gallery() {
   return (
     <section
       id="galeria"
-      className="py-20 bg-gradient-to-b from-craft-100 to-craft-200"
+      className="py-20 bg-white"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">

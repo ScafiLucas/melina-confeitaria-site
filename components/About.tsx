@@ -23,7 +23,7 @@ export default function About() {
   return (
     <section
       id="sobre"
-      className="py-20 bg-white"
+      className="py-20 bg-gradient-to-b from-craft-100 to-craft-200"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">

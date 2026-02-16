@@ -46,10 +46,10 @@ export default function Navbar() {
           >
             <div className="relative h-12">
               <Image
-                src="/logo.png"
+                src="https://res.cloudinary.com/db8aa3e8s/image/upload/v1771269936/LOGO_REDUZIDO_iwdk3b.png"
                 alt="Melina Confeitaria"
-                width={180}
-                height={48}
+                width={128}
+                height={54}
                 className="object-contain h-12 w-auto"
                 priority
               />
@@ -61,7 +61,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-chocolate-800 hover:text-chocolate-900 transition-colors font-heading font-medium"
+                  className="text-chocolate-800 hover:text-chocolate-900 transition-colors font-body font-bold"
                 >
                   {link.label}
                 </Link>

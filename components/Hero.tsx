@@ -1,6 +1,7 @@
 "use client";
 
 import { BookOpen } from "lucide-react";
+import Image from "next/image";
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
 const MENU_PDF_URL = process.env.NEXT_PUBLIC_MENU_PDF || "https://drive.google.com/file/d/1-GtNKvm6eE5LyF66_FqfvavmEEftbppd/view";
@@ -25,8 +26,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center"
-      style={{ background: 'linear-gradient(to bottom, #f1eee9, #ffffff, #f1eee9)' }}
+      className="relative min-h-screen flex items-center justify-center bg-white"
     >
       {/* Padrão sutil de fundo */}
       <div className="absolute inset-0 opacity-[0.03]">
@@ -55,10 +55,14 @@ export default function Hero() {
         </p>
 
         {/* Separador decorativo */}
-        <div className="flex items-center justify-center gap-3 mb-10">
-          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#d4af37' }}></div>
-          <div className="w-16 h-px" style={{ background: 'linear-gradient(to right, #d4af37, #f4e5b8, #d4af37)' }}></div>
-          <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#d4af37' }}></div>
+        <div className="flex items-center justify-center mb-10">
+          <Image
+            src="https://res.cloudinary.com/db8aa3e8s/image/upload/v1771268615/QUEBRA_DE_P%C3%81GINA_aflrsl.png"
+            alt="Separador decorativo"
+            width={200}
+            height={20}
+            className="object-contain"
+          />
         </div>
         
         <p className="text-base sm:text-lg md:text-xl font-body mb-10 max-w-2xl mx-auto leading-relaxed" style={{ color: '#b8a490' }}>
