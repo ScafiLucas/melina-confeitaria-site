@@ -29,18 +29,18 @@ export default function Gallery() {
   return (
     <section
       id="galeria"
-      className="py-20 bg-gradient-to-b from-warmBeige-50 to-rose-50 dark:from-slate-800 dark:to-slate-900"
+      className="py-20 bg-gradient-to-b from-craft-100 to-craft-200"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-block mb-4">
             <span className="text-4xl">🧁</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            Doces Feitos com{" "}
-            <span className="text-rose-500 dark:text-rose-400">Amor</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-chocolate-900 mb-4">
+            Nosso Cardápio de{" "}
+            <span className="text-chocolate-600">Delícias</span>
           </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+          <p className="text-lg text-chocolate-700 max-w-2xl mx-auto">
             Cada criação é única e especial. Confira alguns dos nossos doces que levam 
             afeto e sabor para momentos inesquecíveis.
           </p>
@@ -50,14 +50,14 @@ export default function Gallery() {
           {images.map((image, idx) => (
             <div
               key={idx}
-              className="group relative aspect-square rounded-2xl overflow-hidden bg-rose-100 dark:bg-rose-900 hover:shadow-2xl transition-all duration-300"
+              className="group relative aspect-square rounded-2xl overflow-hidden bg-chocolate-100 hover:shadow-2xl transition-all duration-300 border-2 border-chocolate-200"
             >
               <img
                 src={image.url}
                 alt={image.alt}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-chocolate-900/80 via-chocolate-900/0 to-chocolate-900/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <p className="text-white font-medium text-center">{image.alt}</p>
                 </div>
@@ -67,9 +67,15 @@ export default function Gallery() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-slate-600 dark:text-slate-400 italic">
+          <p className="text-chocolate-600 italic mb-6">
             ✨ Trabalhamos com encomendas personalizadas para tornar seu momento ainda mais especial
           </p>
+          <a
+            href="#contato"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-chocolate-600 text-white hover:bg-chocolate-700 transition-all shadow-lg font-medium"
+          >
+            Fazer Encomenda Personalizada
+          </a>
         </div>
       </div>
     </section>

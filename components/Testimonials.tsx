@@ -22,18 +22,18 @@ export default function Testimonials() {
   return (
     <section
       id="depoimentos"
-      className="py-20 bg-white dark:bg-slate-900"
+      className="py-20 bg-white"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-block mb-4">
             <span className="text-4xl">💖</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-chocolate-900 mb-4">
             O Que Nossos Clientes{" "}
-            <span className="text-rose-500 dark:text-rose-400">Dizem</span>
+            <span className="text-chocolate-600">Dizem</span>
           </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+          <p className="text-lg text-chocolate-700 max-w-2xl mx-auto">
             Cada depoimento é um pedacinho da alegria que sentimos ao compartilhar nossos doces
           </p>
         </div>
@@ -42,32 +42,32 @@ export default function Testimonials() {
           {testimonials.map((testimonial, idx) => (
             <div
               key={idx}
-              className="relative bg-gradient-to-br from-rose-50 to-amber-50 dark:from-slate-800 dark:to-slate-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+              className="relative bg-gradient-to-br from-craft-100 to-amber-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-chocolate-200"
             >
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-rose-200 dark:text-rose-900" />
+              <Quote className="absolute top-4 right-4 w-8 h-8 text-chocolate-200" />
               
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star
                     key={i}
-                    className="w-5 h-5 fill-amber-400 text-amber-400"
+                    className="w-5 h-5 fill-amber-500 text-amber-500"
                   />
                 ))}
               </div>
 
-              <p className="text-slate-700 dark:text-slate-300 mb-6 italic">
+              <p className="text-chocolate-800 mb-6 italic">
                 "{testimonial.text}"
               </p>
 
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-rose-400 to-amber-400 flex items-center justify-center text-white font-bold text-lg">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-chocolate-500 to-amber-500 flex items-center justify-center text-white font-bold text-lg shadow-md">
                   {testimonial.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900 dark:text-white">
+                  <p className="font-semibold text-chocolate-900">
                     {testimonial.name}
                   </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                  <p className="text-sm text-chocolate-600">
                     Cliente Melina
                   </p>
                 </div>
@@ -77,12 +77,12 @@ export default function Testimonials() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-slate-600 dark:text-slate-400 mb-4">
+          <p className="text-chocolate-700 mb-4">
             Quer fazer parte dessa família? ❤️
           </p>
           <a
             href="#contato"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-rose-500 to-rose-600 text-white hover:from-rose-600 hover:to-rose-700 transition-all shadow-lg font-medium"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white hover:from-chocolate-700 hover:to-chocolate-800 transition-all shadow-lg font-medium"
           >
             Faça sua Primeira Encomenda
           </a>
