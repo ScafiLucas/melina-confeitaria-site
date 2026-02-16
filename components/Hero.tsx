@@ -41,7 +41,7 @@ export default function Hero() {
         <div className="flex items-center justify-center gap-4 mb-8">
           <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#d4af37]"></div>
           <span className="text-sm uppercase tracking-[0.25em] font-heading" style={{ color: '#d4af37' }}>
-            Confeitaria Artesanal
+            Cozinha Artesanal
           </span>
           <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#d4af37]"></div>
         </div>

@@ -41,7 +41,8 @@ export default function Testimonials() {
           {testimonials.map((testimonial, idx) => (
             <div
               key={idx}
-              className="relative bg-gradient-to-br from-craft-100 to-amber-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-chocolate-200"
+              className="relative p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-chocolate-200"
+              style={{ backgroundColor: '#f1eee9' }}
             >
               <Quote className="absolute top-4 right-4 w-8 h-8 text-chocolate-200" />
               

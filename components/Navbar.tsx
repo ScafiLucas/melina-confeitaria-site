@@ -38,11 +38,11 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-craft-50/95 backdrop-blur-md border-b border-chocolate-200 shadow-sm">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-18">
-          {/* Logo */}
+        <div className="flex items-center justify-center h-16 md:h-18 relative">
+          {/* Logo - Posição absoluta à esquerda */}
           <Link
             href="#"
-            className="flex items-center"
+            className="absolute left-0 flex items-center"
           >
             <div className="relative h-12">
               <Image
@@ -56,6 +56,7 @@ export default function Navbar() {
             </div>
           </Link>
 
+          {/* Links centralizados */}
           <ul className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -69,7 +70,8 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <div className="flex items-center gap-3">
+          {/* Ícones sociais - Posição absoluta à direita */}
+          <div className="absolute right-0 flex items-center gap-3">
             {/* Botões de Redes Sociais - Ícones Premium */}
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
