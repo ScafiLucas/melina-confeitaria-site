@@ -39,19 +39,18 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-craft-50/95 backdrop-blur-md border-b border-chocolate-200 shadow-sm">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-18">
-          {/* Logo - Pronto para receber PNG */}
+          {/* Logo */}
           <Link
             href="#"
             className="flex items-center"
           >
-            <div className="relative w-10 h-10">
-              {/* Substitua /logo.svg por /logo.png quando adicionar seu logo */}
+            <div className="relative h-12">
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt="Melina Confeitaria"
-                width={40}
-                height={40}
-                className="object-contain"
+                width={180}
+                height={48}
+                className="object-contain h-12 w-auto"
                 priority
               />
             </div>

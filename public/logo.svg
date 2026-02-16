@@ -1,9 +1,0 @@
-<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Placeholder Logo - Substitua por seu logo em PNG -->
-  <rect width="200" height="200" rx="20" fill="#F5F0E8"/>
-  <circle cx="100" cy="80" r="40" fill="#6F5436"/>
-  <circle cx="85" cy="75" r="8" fill="#FFF"/>
-  <circle cx="115" cy="75" r="8" fill="#FFF"/>
-  <path d="M75 95 Q100 110 125 95" stroke="#3D2E1E" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <text x="100" y="150" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#6F5436" text-anchor="middle">MC</text>
-</svg>

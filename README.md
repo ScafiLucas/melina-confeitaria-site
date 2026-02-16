@@ -59,10 +59,10 @@ npm start
      - `NEXT_PUBLIC_INSTAGRAM` - URL do Instagram
 
 2. **Logo**
-   - Substitua `/public/logo.svg` por seu logo em PNG
-   - Formato recomendado: PNG com fundo transparente
-   - Dimensões: 200x200px ou maior (será redimensionado automaticamente)
-   - Atualize o caminho em `components/Navbar.tsx` de `/logo.svg` para `/logo.png`
+   - Logo já configurado em `/public/logo.png`
+   - Para trocar: substitua o arquivo mantendo o nome `logo.png`
+   - Formato: PNG com fundo transparente
+   - Dimensões recomendadas: largura 360px, altura 96px (proporção 180x48 @ 2x para telas retina)
 
 3. **Personalização**
    - Ajuste cores em `tailwind.config.ts` (paleta craft & chocolate)
