@@ -40,6 +40,7 @@ export default {
       },
       fontFamily: {
         display: ['var(--font-display)', 'cursive'],
+        heading: ['var(--font-heading)', 'serif'],
       },
     },
   },
