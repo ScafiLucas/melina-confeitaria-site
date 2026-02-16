@@ -7,6 +7,16 @@ import Image from "next/image";
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
 const INSTAGRAM_URL = process.env.NEXT_PUBLIC_INSTAGRAM || "https://www.instagram.com/melina_confeitariaafetiva/";
+const MENU_PDF_URL = process.env.NEXT_PUBLIC_MENU_PDF || "https://drive.google.com/file/d/1-GtNKvm6eE5LyF66_FqfvavmEEftbppd/view";
+
+// Converte link do Google Drive para visualização direta
+const getDirectPdfUrl = (driveUrl: string) => {
+  const fileIdMatch = driveUrl.match(/\/d\/([^/]+)/);
+  if (fileIdMatch) {
+    return `https://drive.google.com/file/d/${fileIdMatch[1]}/preview`;
+  }
+  return driveUrl;
+};
 
 // Ícone customizado de WhatsApp (mais visual)
 const WhatsAppIcon = ({ size = 22 }: { size?: number }) => (
@@ -17,7 +27,7 @@ const WhatsAppIcon = ({ size = 22 }: { size?: number }) => (
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
-  { href: "#galeria", label: "Cardápio" },
+  { href: "#galeria", label: "Galeria" },
   { href: "#depoimentos", label: "Depoimentos" },
   { href: "#contato", label: "Contato" },
 ];
@@ -83,7 +93,9 @@ export default function Navbar() {
             </a>
 
             <a
-              href="#galeria"
+              href={getDirectPdfUrl(MENU_PDF_URL)}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden md:inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border-2 border-chocolate-600 text-chocolate-700 hover:bg-chocolate-50 transition-all font-medium"
             >
               <BookOpen size={18} />
@@ -144,8 +156,9 @@ export default function Navbar() {
               </li>
               <li className="flex flex-col gap-2 pt-2 border-t border-chocolate-200">
                 <a
-                  href="#galeria"
-                  onClick={() => setOpen(false)}
+                  href={getDirectPdfUrl(MENU_PDF_URL)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border-2 border-chocolate-600 text-chocolate-700 font-medium"
                 >
                   <BookOpen size={18} />

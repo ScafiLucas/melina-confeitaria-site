@@ -1,4 +1,14 @@
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
+const MENU_PDF_URL = process.env.NEXT_PUBLIC_MENU_PDF || "https://drive.google.com/file/d/1-GtNKvm6eE5LyF66_FqfvavmEEftbppd/view";
+
+// Converte link do Google Drive para visualização direta
+const getDirectPdfUrl = (driveUrl: string) => {
+  const fileIdMatch = driveUrl.match(/\/d\/([^/]+)/);
+  if (fileIdMatch) {
+    return `https://drive.google.com/file/d/${fileIdMatch[1]}/preview`;
+  }
+  return driveUrl;
+};
 
 export default function Hero() {
   return (
@@ -46,7 +56,9 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
-            href="#galeria"
+            href={getDirectPdfUrl(MENU_PDF_URL)}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center justify-center px-10 py-4 text-base font-medium tracking-wide bg-chocolate-800 text-white hover:bg-chocolate-900 transition-all duration-300 shadow-md hover:shadow-lg"
           >
             <span>Ver Cardápio</span>
