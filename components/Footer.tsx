@@ -47,7 +47,7 @@ export default function Footer() {
           {/* Logo e descrição */}
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-heading font-bold mb-4" style={{ color: '#00255F' }}>Melina Confeitaria</h3>
-            <p className="font-body text-chocolate-700 mb-6">
+            <p className="font-body text-chocolate-800 mb-6">
               Doces feitos com amor e tradição familiar. Transformando momentos especiais em memórias inesquecíveis.
             </p>
             <a
@@ -69,7 +69,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="font-body text-chocolate-700 hover:text-chocolate-900 transition-colors"
+                    className="font-body text-chocolate-800 hover:text-chocolate-900 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -86,7 +86,7 @@ export default function Footer() {
                 <Mail className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#6f5436' }} />
                 <a
                   href="mailto:melinaconfeitariaafetiva@gmail.com"
-                  className="font-body text-chocolate-700 hover:text-chocolate-900 transition-colors"
+                  className="font-body text-chocolate-800 hover:text-chocolate-900 transition-colors"
                 >
                   melinaconfeitariaafetiva@gmail.com
                 </a>
@@ -97,14 +97,14 @@ export default function Footer() {
                   href={`https://wa.me/${WHATSAPP_NUMBER}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-body text-chocolate-700 hover:text-chocolate-900 transition-colors"
+                  className="font-body text-chocolate-800 hover:text-chocolate-900 transition-colors"
                 >
                   (19) 97119-3794
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#6f5436' }} />
-                <span className="font-body text-chocolate-700">
+                <span className="font-body text-chocolate-800">
                   Barão Geraldo - Campinas/SP
                 </span>
               </li>
@@ -115,7 +115,7 @@ export default function Footer() {
         {/* Redes sociais e copyright */}
         <div className="pt-8 border-t border-chocolate-300">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="font-body text-chocolate-700 text-sm">
+            <p className="font-body text-chocolate-800 text-sm">
               © {currentYear} Melina Confeitaria. Feito com amor e muito carinho.
             </p>
             <div className="flex items-center gap-4">
