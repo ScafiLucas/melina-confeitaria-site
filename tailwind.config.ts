@@ -38,6 +38,9 @@ export default {
           950: '#2a1f15',
         },
       },
+      fontFamily: {
+        display: ['var(--font-display)', 'cursive'],
+      },
     },
   },
   plugins: [],
