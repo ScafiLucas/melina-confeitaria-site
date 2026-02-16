@@ -7,30 +7,37 @@ import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Seu Site | Título Personalizado",
-  description: "Descrição do seu site aqui. Explique o que você oferece de forma clara e concisa.",
+  title: "Melina Confeitaria Afetiva | Doces Feitos com Amor e Tradição",
+  description: "Confeitaria artesanal familiar. Doces que aquecem o coração com receitas de família, feitos com amor e ingredientes selecionados. Encomendas personalizadas em São Paulo.",
   keywords: [
-    "palavra-chave-1",
-    "palavra-chave-2",
-    "palavra-chave-3",
+    "confeitaria afetiva",
+    "confeitaria artesanal",
+    "doces caseiros",
+    "bolos personalizados",
+    "confeitaria são paulo",
+    "doces artesanais",
+    "confeitaria familiar",
+    "encomenda de bolos",
+    "brigadeiro gourmet",
+    "doces finos",
   ],
   openGraph: {
-    title: "Seu Site | Título para Redes Sociais",
-    description: "Descrição atraente para compartilhamento em redes sociais.",
+    title: "Melina Confeitaria Afetiva | Doces Feitos com Amor 💕",
+    description: "Transforme seus momentos especiais em memórias inesquecíveis com nossos doces artesanais feitos com receitas de família.",
     type: "website",
     locale: "pt_BR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Seu Site | Título para Twitter",
-    description: "Descrição para Twitter.",
+    title: "Melina Confeitaria Afetiva | Doces com Amor",
+    description: "Confeitaria artesanal familiar em São Paulo. Cada doce carrega afeto e tradição.",
   },
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: "https://seu-dominio.com",
+    canonical: "https://melinaconfeitaria.com",
   },
 };
 

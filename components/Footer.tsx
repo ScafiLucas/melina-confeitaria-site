@@ -22,35 +22,38 @@ export default function Footer() {
   return (
     <footer
       id="contato"
-      className="bg-slate-900 dark:bg-black text-white"
+      className="bg-gradient-to-br from-rose-900 to-slate-900 dark:from-slate-900 dark:to-black text-white"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo e descrição */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold text-white mb-4">Seu Logo</h3>
-            <p className="text-slate-300 mb-6">
-              Breve descrição da sua empresa ou slogan. Mantenha curto e impactante.
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-3xl">🧁</span>
+              <h3 className="text-2xl font-bold text-white">Melina Confeitaria</h3>
+            </div>
+            <p className="text-rose-100 mb-6">
+              Doces feitos com amor e tradição familiar. Transformando momentos especiais em memórias inesquecíveis.
             </p>
             <a
               href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors font-medium"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white text-rose-600 hover:bg-rose-50 transition-colors font-medium shadow-lg"
             >
-              Agendar Consulta
+              💌 Fazer Encomenda
             </a>
           </div>
 
           {/* Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
+            <h4 className="text-lg font-semibold mb-4 text-rose-100">Links Rápidos</h4>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-slate-300 hover:text-indigo-400 transition-colors"
+                    className="text-rose-200 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -61,30 +64,30 @@ export default function Footer() {
 
           {/* Contato */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contato</h4>
+            <h4 className="text-lg font-semibold mb-4 text-rose-100">Contato</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5" />
+                <Mail className="w-5 h-5 text-rose-300 flex-shrink-0 mt-0.5" />
                 <a
-                  href="mailto:contato@seusite.com"
-                  className="text-slate-300 hover:text-indigo-400 transition-colors"
+                  href="mailto:contato@melinaconfeitaria.com"
+                  className="text-rose-200 hover:text-white transition-colors"
                 >
-                  contato@seusite.com
+                  contato@melinaconfeitaria.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5" />
+                <Phone className="w-5 h-5 text-rose-300 flex-shrink-0 mt-0.5" />
                 <a
                   href="tel:+5511999999999"
-                  className="text-slate-300 hover:text-indigo-400 transition-colors"
+                  className="text-rose-200 hover:text-white transition-colors"
                 >
                   (11) 99999-9999
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5" />
-                <span className="text-slate-300">
-                  Sua cidade, Estado
+                <MapPin className="w-5 h-5 text-rose-300 flex-shrink-0 mt-0.5" />
+                <span className="text-rose-200">
+                  São Paulo, SP
                 </span>
               </li>
             </ul>
@@ -92,10 +95,10 @@ export default function Footer() {
         </div>
 
         {/* Redes sociais e copyright */}
-        <div className="pt-8 border-t border-slate-800">
+        <div className="pt-8 border-t border-rose-800/50">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-slate-400 text-sm">
-              © {currentYear} Seu Site. Todos os direitos reservados.
+            <p className="text-rose-200 text-sm">
+              © {currentYear} Melina Confeitaria. Feito com ❤️ e muito carinho.
             </p>
             <div className="flex items-center gap-4">
               {footerLinks.social.map((social) => (
@@ -104,7 +107,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg text-slate-400 hover:text-indigo-400 hover:bg-slate-800 transition-all"
+                  className="p-2 rounded-lg text-rose-200 hover:text-white hover:bg-rose-800/50 transition-all"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5" />

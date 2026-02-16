@@ -1,6 +1,6 @@
-# 🎨 Como Usar Este Template
+# 🧁 Melina Confeitaria - Guia de Uso
 
-## 📋 Passo a Passo para Personalização
+## 📋 Passo a Passo para Configuração e Personalização
 
 ### 1️⃣ Instalação Inicial
 

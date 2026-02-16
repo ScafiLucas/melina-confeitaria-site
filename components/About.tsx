@@ -1,10 +1,22 @@
-import { CheckCircle2 } from "lucide-react";
+import { Heart, Home, Cookie, Sparkles } from "lucide-react";
 
 const features = [
-  "Característica ou benefício 1",
-  "Característica ou benefício 2",
-  "Característica ou benefício 3",
-  "Característica ou benefício 4",
+  {
+    icon: Heart,
+    text: "Receitas de família passadas com amor através de gerações"
+  },
+  {
+    icon: Home,
+    text: "Ambiente acolhedor e produção artesanal caseira"
+  },
+  {
+    icon: Cookie,
+    text: "Ingredientes selecionados e de qualidade premium"
+  },
+  {
+    icon: Sparkles,
+    text: "Cada doce é feito com atenção especial aos detalhes"
+  },
 ];
 
 export default function About() {
@@ -17,33 +29,43 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
-              Sobre Nós
+              Nossa História de{" "}
+              <span className="text-rose-500 dark:text-rose-400">Afeto</span>
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300 mb-6">
-              Texto descritivo sobre sua empresa, produto ou serviço. Explique o que você faz,
-              como você faz e por que as pessoas devem escolher você.
+              A Melina Confeitaria nasceu do desejo de compartilhar o sabor das receitas que sempre 
+              trouxeram alegria e união para nossa família. Cada doce que preparamos carrega consigo 
+              memórias afetivas, o aroma da casa da vovó e o carinho de quem cozinha com o coração.
             </p>
             <p className="text-lg text-slate-600 dark:text-slate-300 mb-8">
-              Adicione mais detalhes que sejam relevantes para seus clientes. Conte sua história
-              de forma envolvente e autêntica.
+              Acreditamos que a verdadeira confeitaria vai além do sabor - ela cria momentos, 
+              fortalece laços e aquece a alma. Aqui, cada pedido é tratado com atenção especial, 
+              como se estivéssemos preparando para alguém da nossa própria família.
             </p>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {features.map((feature, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-slate-700 dark:text-slate-300">{feature}</span>
+                <li key={idx} className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center">
+                    <feature.icon className="w-5 h-5 text-rose-600 dark:text-rose-400" />
+                  </div>
+                  <span className="text-slate-700 dark:text-slate-300 pt-2">{feature.text}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="relative">
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-indigo-900 dark:to-purple-900 overflow-hidden">
+            <div className="aspect-square rounded-2xl bg-gradient-to-br from-rose-100 to-amber-100 dark:from-rose-900 dark:to-amber-900 overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop"
-                alt="Sobre nós"
+                src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=800&auto=format&fit=crop"
+                alt="Confeitaria Melina - Ambiente familiar"
                 className="w-full h-full object-cover"
               />
+            </div>
+            <div className="absolute -bottom-6 -right-6 bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 max-w-xs">
+              <p className="text-sm text-slate-600 dark:text-slate-300 italic">
+                "O amor é o ingrediente secreto que torna tudo mais gostoso" ❤️
+              </p>
             </div>
           </div>
         </div>

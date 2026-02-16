@@ -1,6 +1,6 @@
-# Landing Page Template
+# 🧁 Melina Confeitaria Afetiva
 
-Template moderno de landing page construído com Next.js 16, TypeScript e Tailwind CSS.
+Site da Melina Confeitaria - Doces feitos com amor e tradição familiar. Construído com Next.js 16, TypeScript e Tailwind CSS.
 
 ## 🚀 Tecnologias
 
