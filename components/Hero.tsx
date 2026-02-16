@@ -4,54 +4,81 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-craft-100 via-craft-50 to-amber-50"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-craft-50 via-white to-craft-50"
     >
-      <div className="absolute inset-0 opacity-[0.07]">
+      {/* Padrão sutil de fundo */}
+      <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle, rgba(139, 111, 71, 0.15) 1px, transparent 1px)',
-          backgroundSize: '30px 30px'
+          backgroundImage: 'radial-gradient(circle, rgba(139, 111, 71, 0.1) 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
         }}/>
       </div>
       
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        <div className="mb-6">
-          <span className="inline-block px-4 py-2 bg-chocolate-100 text-chocolate-700 rounded-full text-sm font-medium mb-4">
-            ❤️ Feito com amor e tradição
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+        {/* Linha decorativa superior */}
+        <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="h-px w-12 bg-gradient-to-r from-transparent to-chocolate-300"></div>
+          <span className="text-sm uppercase tracking-[0.2em] text-chocolate-600 font-light">
+            Confeitaria Artesanal
           </span>
+          <div className="h-px w-12 bg-gradient-to-l from-transparent to-chocolate-300"></div>
         </div>
         
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-chocolate-900 mb-6 leading-tight">
-          Melina{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-chocolate-600 to-amber-600">
-            Confeitaria Afetiva
-          </span>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-chocolate-900 mb-6 leading-[1.1] tracking-tight">
+          Melina
         </h1>
         
-        <p className="text-lg sm:text-xl md:text-2xl text-chocolate-800 mb-8 max-w-3xl mx-auto">
-          Doces que aquecem o coração e resgatam memórias. Cada receita carrega o carinho e a tradição da nossa família para a sua.
+        <p className="text-xl sm:text-2xl md:text-3xl text-chocolate-700 mb-8 font-light tracking-wide">
+          Confeitaria Afetiva
+        </p>
+
+        {/* Separador decorativo */}
+        <div className="flex items-center justify-center gap-3 mb-10">
+          <div className="w-2 h-2 rounded-full bg-amber-500"></div>
+          <div className="w-16 h-px bg-gradient-to-r from-chocolate-300 via-amber-400 to-chocolate-300"></div>
+          <div className="w-2 h-2 rounded-full bg-amber-500"></div>
+        </div>
+        
+        <p className="text-base sm:text-lg md:text-xl text-chocolate-700 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+          Doces que aquecem o coração e resgatam memórias.<br className="hidden sm:block" />
+          Cada receita carrega o carinho e a tradição da nossa família para a sua.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
             href="#galeria"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white hover:from-chocolate-700 hover:to-chocolate-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="group inline-flex items-center justify-center px-10 py-4 text-base font-medium tracking-wide bg-chocolate-800 text-white hover:bg-chocolate-900 transition-all duration-300 shadow-md hover:shadow-lg"
           >
-            📖 Ver Cardápio
+            <span>Ver Cardápio</span>
+            <svg 
+              className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </a>
           <a
             href={CALENDLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-amber-500 text-white hover:bg-amber-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center px-10 py-4 text-base font-medium tracking-wide border-2 border-chocolate-800 text-chocolate-800 hover:bg-chocolate-800 hover:text-white transition-all duration-300"
           >
-            Faça sua Encomenda
+            Fazer Encomenda
           </a>
-          <a
-            href="#sobre"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full border-2 border-chocolate-600 text-chocolate-700 hover:bg-chocolate-50 transition-all"
+        </div>
+
+        {/* Indicador de scroll */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <svg 
+            className="w-6 h-6 text-chocolate-400" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
           >
-            Nossa História
-          </a>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </div>
     </section>
