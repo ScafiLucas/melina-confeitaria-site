@@ -27,7 +27,7 @@ export default function Hero() {
           Melina
         </h1>
         
-        <p className="text-xl sm:text-2xl md:text-3xl mb-8 font-display tracking-wide" style={{ color: '#b8a490' }}>
+        <p className="text-xl sm:text-2xl md:text-3xl mb-8 font-display tracking-wide" style={{ color: '#5a432b' }}>
           Confeitaria Afetiva
         </p>
 
@@ -38,7 +38,7 @@ export default function Hero() {
           <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#d4af37' }}></div>
         </div>
         
-        <p className="text-base sm:text-lg md:text-xl font-body mb-16 max-w-2xl mx-auto leading-relaxed" style={{ color: '#5a432b' }}>
+        <p className="text-base sm:text-lg md:text-xl font-body mb-16 max-w-2xl mx-auto leading-relaxed" style={{ color: '#b8a490' }}>
           Doces que aquecem o coração e resgatam memórias.<br className="hidden sm:block" />
           Cada receita carrega o carinho e a tradição da nossa família para a sua.
         </p>
