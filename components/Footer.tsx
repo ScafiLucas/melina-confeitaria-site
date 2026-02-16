@@ -46,7 +46,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo e descrição */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-heading font-bold text-chocolate-900 mb-4">Melina Confeitaria</h3>
+            <h3 className="text-2xl font-heading font-bold mb-4" style={{ color: '#00255F' }}>Melina Confeitaria</h3>
             <p className="font-body text-chocolate-700 mb-6">
               Doces feitos com amor e tradição familiar. Transformando momentos especiais em memórias inesquecíveis.
             </p>
@@ -63,7 +63,7 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="text-lg font-heading font-semibold mb-4 text-chocolate-900">Links Rápidos</h4>
+            <h4 className="text-lg font-heading font-semibold mb-4" style={{ color: '#00255F' }}>Links Rápidos</h4>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
@@ -80,7 +80,7 @@ export default function Footer() {
 
           {/* Contato */}
           <div>
-            <h4 className="text-lg font-heading font-semibold mb-4 text-chocolate-900">Contato</h4>
+            <h4 className="text-lg font-heading font-semibold mb-4" style={{ color: '#00255F' }}>Contato</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#6f5436' }} />
