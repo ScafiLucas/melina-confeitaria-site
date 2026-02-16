@@ -30,7 +30,7 @@ export default function Testimonials() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4" style={{ color: '#00255F' }}>
             O Que Nossos Clientes{" "}
-            <span style={{ color: '#d4af37' }}>Dizem</span>
+            <span style={{ color: '#b8a490' }}>Dizem</span>
           </h2>
           <p className="text-lg font-body text-chocolate-700 max-w-2xl mx-auto">
             Cada depoimento é um pedacinho da alegria que sentimos ao compartilhar nossos doces

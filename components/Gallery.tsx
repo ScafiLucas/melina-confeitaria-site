@@ -37,7 +37,7 @@ export default function Gallery() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4" style={{ color: '#00255F' }}>
             Galeria de{" "}
-            <span style={{ color: '#d4af37' }}>Delícias</span>
+            <span style={{ color: '#b8a490' }}>Delícias</span>
           </h2>
           <p className="text-lg font-body text-chocolate-700 max-w-2xl mx-auto">
             Cada criação é única e especial. Confira alguns dos nossos doces que levam 
