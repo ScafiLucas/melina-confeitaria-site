@@ -28,9 +28,9 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-chocolate-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6" style={{ color: '#00255F' }}>
               Nossa História de{" "}
-              <span className="text-chocolate-600">Afeto</span>
+              <span style={{ color: '#d4af37' }}>Afeto</span>
             </h2>
             <p className="text-lg font-body text-chocolate-700 mb-6">
               A Melina Confeitaria nasceu do desejo de compartilhar o sabor das receitas que sempre 

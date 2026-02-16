@@ -28,9 +28,9 @@ export default function Testimonials() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-chocolate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4" style={{ color: '#00255F' }}>
             O Que Nossos Clientes{" "}
-            <span className="text-chocolate-600">Dizem</span>
+            <span style={{ color: '#d4af37' }}>Dizem</span>
           </h2>
           <p className="text-lg font-body text-chocolate-700 max-w-2xl mx-auto">
             Cada depoimento é um pedacinho da alegria que sentimos ao compartilhar nossos doces
@@ -63,7 +63,7 @@ export default function Testimonials() {
                   {testimonial.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-heading font-semibold text-chocolate-900">
+                  <p className="font-heading font-semibold" style={{ color: '#00255F' }}>
                     {testimonial.name}
                   </p>
                   <p className="text-sm font-body text-chocolate-600">
