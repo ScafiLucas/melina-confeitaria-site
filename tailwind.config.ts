@@ -14,7 +14,7 @@ export default {
         // Paleta Confeitaria - Papel Craft & Chocolate
         craft: {
           50: '#fdfcfb',
-          100: '#faf7f2',
+          100: '#f1eee9',
           200: '#f5f0e8',
           300: '#ede4d3',
           400: '#e0d1b8',
@@ -30,12 +30,12 @@ export default {
           200: '#dfd3c3',
           300: '#c9b5a0',
           400: '#a88b6f',
-          500: '#8b6f47',
+          500: '#8f7054',
           600: '#6f5436',
-          700: '#5a432b',
+          700: '#8f7054',
           800: '#4a3724',
-          900: '#3d2e1e',
-          950: '#2a1f15',
+          900: '#000000',
+          950: '#000000',
         },
       },
       fontFamily: {

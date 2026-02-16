@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #faf7f2;
-  --foreground: #3d2e1e;
+  --background: #f1eee9;
+  --foreground: #8f7054;
   --font-display: 'Dancing Script', cursive;
   --font-heading: 'Young Serif', serif;
 }
@@ -14,5 +14,5 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: 'Lora', serif;
 }
