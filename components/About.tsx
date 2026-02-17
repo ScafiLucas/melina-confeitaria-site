@@ -57,7 +57,7 @@ export default function About() {
           <div className="relative">
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-chocolate-200 to-amber-200 overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=800&auto=format&fit=crop"
+                src="https://res.cloudinary.com/db8aa3e8s/image/upload/v1771284539/WhatsApp_Image_2026-02-16_at_20.27.54_ldpzwu.jpg"
                 alt="Confeitaria Melina - Ambiente familiar"
                 className="w-full h-full object-cover"
               />

@@ -4,18 +4,18 @@ const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
 
 const testimonials = [
   {
-    name: "Ana Paula Silva",
-    text: "Os doces da Melina transformaram o aniversário da minha filha em um momento mágico! O sabor me lembrou a infância na casa da minha avó. É amor em forma de doce!",
+    name: "Cilene Mourão",
+    text: "O bolo de laranja da Melina foi pra casa da irmã e virou festa,\nporque a Carolzinha aproveitou o café pra anunciar que vem bebê!\nA família amou tudo e sentiu o carinho em cada garfada dada.\nVocês estão no caminho certo, o afeto transborda no trabalho.",
     rating: 5,
   },
   {
-    name: "Carlos Eduardo",
-    text: "Já fiz várias encomendas e sempre me surpreendo com a qualidade e o carinho em cada detalhe. É uma confeitaria que entende o verdadeiro significado de fazer com amor.",
+    name: "PE Leonardo",
+    text: "O padre que morou na Itália provou e disse: é igualzinho ao bolo europeu! Aquele toque de limão azedinho e pouco açúcar que a gente precisava aprender. Não é enjoado, é daqueles que você come e dá vontade de comer mais e mais. A Aline subiu de nível, virou boleira italiana, foi um espetáculo de feedback!",
     rating: 5,
   },
   {
-    name: "Mariana Costa",
-    text: "Descobri a Melina Confeitaria por indicação e não me arrependo! Os brigadeiros são os melhores que já comi, e o atendimento é sempre acolhedor e familiar.",
+    name: "Paula Moraes",
+    text: "Oi Melina!! Tudo bem?! passando pra dizer que estava tudo uma delícia mesmo!!! Achamos o bolo de café maravilhoso, os docinhos, o cookie!! Parabéns, você é muito talentosa e dá pra ver que tem muito amor em tudo!",
     rating: 5,
   },
 ];
@@ -41,7 +41,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, idx) => (
             <div
               key={idx}
-              className="relative p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border"
+              className="relative p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border flex flex-col"
               style={{ 
                 background: 'linear-gradient(135deg, #ebe6dd 0%, #e0d7c9 100%)',
                 borderColor: '#d4c5b0'
@@ -58,11 +58,11 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              <p className="font-body text-chocolate-800 mb-6 italic">
+              <p className="font-body text-chocolate-800 mb-6 italic whitespace-pre-line flex-1">
                 "{testimonial.text}"
               </p>
 
-              <div>
+              <div className="mt-auto">
                 <p className="font-heading font-semibold" style={{ color: '#00255F' }}>
                   {testimonial.name}
                 </p>

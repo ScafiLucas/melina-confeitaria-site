@@ -25,6 +25,18 @@ const images = [
     url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771283316/WhatsApp_Image_2026-02-16_at_18.55.37_lybc7t.jpg",
     alt: "Docinhos",
   },
+  {
+    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771284313/WhatsApp_Image_2026-02-16_at_20.24.42_xeiyav.jpg",
+    alt: "Bolos Interativos",
+  },
+  {
+    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771284315/WhatsApp_Image_2026-02-16_at_18.24.33_a0dshj.jpg",
+    alt: "Bolos Caseiros",
+  },
+  {
+    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771284539/WhatsApp_Image_2026-02-16_at_20.28.17_rgzllx.jpg",
+    alt: "Bolos Personalizados",
+  },
 ];
 
 export default function Gallery() {
