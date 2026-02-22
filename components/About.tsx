@@ -23,21 +23,21 @@ export default function About() {
   return (
     <section
       id="sobre"
-      className="py-20 bg-gradient-to-b from-craft-100 to-craft-200"
+      className="py-fluid bg-gradient-to-b from-craft-100 to-craft-200"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="container-fluid px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 gap-fluid items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6" style={{ color: '#00255F' }}>
+            <h2 className="text-fluid-h2 font-heading font-bold mb-6" style={{ color: '#00255F' }}>
               Nossa História de{" "}
               <span style={{ color: '#b8a490' }}>Afeto</span>
             </h2>
-            <p className="text-lg font-body text-chocolate-700 mb-6">
+            <p className="text-fluid-body-lg font-body text-chocolate-700 mb-6">
               A Melina Confeitaria nasceu do desejo de compartilhar o sabor das receitas que sempre 
               trouxeram alegria e união para nossa família. Cada doce que preparamos carrega consigo 
               memórias afetivas, o aroma da casa da vovó e o carinho de quem cozinha com o coração.
             </p>
-            <p className="text-lg font-body text-chocolate-700 mb-8">
+            <p className="text-fluid-body-lg font-body text-chocolate-700 mb-8">
               Acreditamos que a verdadeira confeitaria vai além do sabor - ela cria momentos, 
               fortalece laços e aquece a alma. Aqui, cada pedido é tratado com atenção especial, 
               como se estivéssemos preparando para alguém da nossa própria família.

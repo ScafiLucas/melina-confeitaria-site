@@ -1,47 +1,63 @@
+"use client";
+
 import { Star, Quote } from "lucide-react";
+import { useRef, useState, useEffect } from "react";
+import testimonialsData from "@/data/testimonials.json";
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
 
-const testimonials = [
-  {
-    name: "Cilene Mourão",
-    text: "O bolo de laranja da Melina foi pra casa da irmã e virou festa,\nporque a Carolzinha aproveitou o café pra anunciar que vem bebê!\nA família amou tudo e sentiu o carinho em cada garfada dada.\nVocês estão no caminho certo, o afeto transborda no trabalho.",
-    rating: 5,
-  },
-  {
-    name: "PE Leonardo",
-    text: "O padre que morou na Itália provou e disse: é igualzinho ao bolo europeu! Aquele toque de limão azedinho e pouco açúcar que a gente precisava aprender. Não é enjoado, é daqueles que você come e dá vontade de comer mais e mais. A Aline subiu de nível, virou boleira italiana, foi um espetáculo de feedback!",
-    rating: 5,
-  },
-  {
-    name: "Paula Moraes",
-    text: "Oi Melina!! Tudo bem?! passando pra dizer que estava tudo uma delícia mesmo!!! Achamos o bolo de café maravilhoso, os docinhos, o cookie!! Parabéns, você é muito talentosa e dá pra ver que tem muito amor em tudo!",
-    rating: 5,
-  },
-];
+type Testimonial = { name: string; text: string; rating: number };
+const testimonials = testimonialsData as Testimonial[];
 
 export default function Testimonials() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const handleScroll = () => {
+      const scrollLeft = el.scrollLeft;
+      const cardWidth = el.querySelector("[data-carousel-item]")?.getBoundingClientRect().width ?? 320;
+      const gap = 20;
+      const index = Math.round(scrollLeft / (cardWidth + gap));
+      setActiveIndex(Math.min(index, testimonials.length - 1));
+    };
+
+    el.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => el.removeEventListener("scroll", handleScroll);
+  }, [testimonials.length]);
+
   return (
     <section
       id="depoimentos"
-      className="py-20 bg-gradient-to-b from-craft-100 to-craft-200"
+      className="py-fluid bg-gradient-to-b from-craft-100 to-craft-200"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container-fluid px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4" style={{ color: '#00255F' }}>
+          <h2 className="text-fluid-h2 font-heading font-bold mb-4" style={{ color: '#00255F' }}>
             O Que Nossos Clientes{" "}
             <span style={{ color: '#b8a490' }}>Dizem</span>
           </h2>
-          <p className="text-lg font-body text-chocolate-700 max-w-3xl mx-auto">
+          <p className="text-fluid-body-lg font-body text-chocolate-700 max-w-3xl mx-auto">
             Depoimentos de quem já provou nosso carinho em forma de doce.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, idx) => (
-            <div
-              key={idx}
-              className="relative p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border flex flex-col"
+        <div className="relative overflow-visible">
+          {/* Carrossel horizontal puro (igual comportamento da Galeria) */}
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-auto snap-x snap-mandatory gap-5 -mx-4 pl-4 pr-4 pt-2 pb-4 md:mx-0 md:pl-0 md:pr-6 md:pb-6 scroll-smooth [scrollbar-width:none] [-webkit-overflow-scrolling:touch] [touch-action:pan-x] [&::-webkit-scrollbar]:hidden"
+            style={{ scrollPaddingInline: "1rem" }}
+          >
+            {testimonials.map((testimonial, idx) => (
+              <div
+                key={idx}
+                data-carousel-item
+                className="relative flex-shrink-0 w-[82%] min-w-[280px] max-w-[320px] md:w-[clamp(320px,20vw,400px)] md:min-w-[clamp(320px,20vw,400px)] p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border snap-start first:snap-center last:snap-end md:snap-center"
               style={{ 
                 background: 'linear-gradient(135deg, #ebe6dd 0%, #e0d7c9 100%)',
                 borderColor: '#d4c5b0'
@@ -58,11 +74,11 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              <p className="font-body text-chocolate-800 mb-6 italic whitespace-pre-line flex-1">
+              <p className="font-body text-chocolate-800 mb-6 italic whitespace-pre-line leading-relaxed">
                 "{testimonial.text}"
               </p>
 
-              <div className="mt-auto">
+              <div>
                 <p className="font-heading font-semibold" style={{ color: '#00255F' }}>
                   {testimonial.name}
                 </p>
@@ -72,6 +88,33 @@ export default function Testimonials() {
               </div>
             </div>
           ))}
+          </div>
+
+          {/* Indicadores do carrossel */}
+          <div className="flex justify-center gap-2 mt-4 md:mt-6" role="tablist" aria-label="Depoimentos">
+            {testimonials.map((_, idx) => (
+              <button
+                key={idx}
+                type="button"
+                role="tab"
+                aria-selected={activeIndex === idx}
+                aria-label={`Depoimento ${idx + 1}`}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  activeIndex === idx
+                    ? "w-6 bg-chocolate-600"
+                    : "w-2 bg-chocolate-300 hover:bg-chocolate-400"
+                }`}
+                onClick={() => {
+                  const el = scrollRef.current;
+                  if (!el) return;
+                  const card = el.querySelector(`[data-carousel-item]:nth-child(${idx + 1})`) as HTMLElement;
+                  if (card) {
+                    el.scrollTo({ left: card.offsetLeft - 16, behavior: "smooth" });
+                  }
+                }}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="mt-12 text-center">

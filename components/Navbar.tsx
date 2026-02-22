@@ -70,14 +70,13 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Ícones sociais - Posição absoluta à direita */}
-          <div className="absolute right-0 flex items-center gap-3">
-            {/* Botões de Redes Sociais - Ícones Premium */}
+          {/* Ícones sociais - sempre visíveis (mobile + desktop) */}
+          <div className="absolute right-0 flex items-center gap-2 md:gap-3">
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:flex items-center justify-center w-9 h-9 text-chocolate-600 hover:text-green-600 transition-colors"
+              className="flex items-center justify-center w-9 h-9 text-chocolate-600 hover:text-green-600 transition-colors"
               aria-label="WhatsApp"
             >
               <WhatsAppIcon size={22} />
@@ -86,7 +85,7 @@ export default function Navbar() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:flex items-center justify-center w-9 h-9 text-chocolate-600 hover:text-pink-600 transition-colors"
+              className="flex items-center justify-center w-9 h-9 text-chocolate-600 hover:text-pink-600 transition-colors"
               aria-label="Instagram"
             >
               <Instagram size={22} strokeWidth={1.5} />
@@ -104,45 +103,25 @@ export default function Navbar() {
         </div>
 
         {open && (
-          <div className="md:hidden py-4 border-t border-chocolate-200">
-            <ul className="flex flex-col gap-4">
+          <div className="md:hidden py-4 border-t border-chocolate-200 bg-craft-50/98 shadow-lg">
+            <ul className="flex flex-col items-center gap-3">
               {navLinks.map((link) => (
-                <li key={link.href}>
+                <li key={link.href} className="w-full text-center">
                   <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block text-chocolate-800 hover:text-chocolate-900"
+                    className="block w-full py-1 text-center text-chocolate-800 hover:text-chocolate-900 font-medium"
                   >
                     {link.label}
                   </Link>
                 </li>
               ))}
-              <li className="flex gap-4 pt-2">
-                <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-10 h-10 text-chocolate-700 hover:text-green-600"
-                  aria-label="WhatsApp"
-                >
-                  <WhatsAppIcon size={24} />
-                </a>
-                <a
-                  href={INSTAGRAM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-10 h-10 text-chocolate-700 hover:text-pink-600"
-                  aria-label="Instagram"
-                >
-                  <Instagram size={24} strokeWidth={1.5} />
-                </a>
-              </li>
-              <li className="flex flex-col gap-2 pt-2 border-t border-chocolate-200">
+              <li className="w-full flex flex-col items-center gap-3 pt-3 px-4 border-t border-chocolate-200">
                 <a
                   href={getDirectPdfUrl(MENU_PDF_URL)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border-2 border-chocolate-600 text-chocolate-700 font-medium"
+                  className="inline-flex w-full max-w-[340px] items-center justify-center gap-2 px-6 py-2.5 rounded-full border-2 border-chocolate-600 text-chocolate-700 font-medium"
                 >
                   <BookOpen size={18} />
                   Ver Cardápio
@@ -151,7 +130,7 @@ export default function Navbar() {
                   href={`https://wa.me/${WHATSAPP_NUMBER}?text=Olá! Gostaria de fazer uma encomenda.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex px-4 py-2 rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white font-medium"
+                  className="inline-flex w-full max-w-[340px] items-center justify-center px-6 py-2.5 rounded-full bg-gradient-to-r from-chocolate-600 to-chocolate-700 text-white font-medium"
                 >
                   Encomendar
                 </a>

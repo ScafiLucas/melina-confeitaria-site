@@ -45,42 +45,42 @@ export default function Hero() {
         }}
       />
       
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-        {/* Linha decorativa superior */}
-        <div className="flex items-center justify-center gap-4 mb-8">
-          <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#d4af37]"></div>
-          <span className="text-sm uppercase tracking-[0.25em] font-heading" style={{ color: '#d4af37' }}>
+      <div className="relative z-10 container-fluid px-4 sm:px-6 lg:px-8 py-12 md:py-24 text-center">
+        {/* Linha decorativa superior - menos espaço no mobile */}
+        <div className="flex items-center justify-center gap-4 mb-6 md:mb-8">
+          <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#b8942e]"></div>
+          <span className="text-sm uppercase tracking-[0.25em] font-heading" style={{ color: '#b8942e' }}>
             Cozinha Artesanal
           </span>
-          <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#d4af37]"></div>
+          <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#b8942e]"></div>
         </div>
         
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-thin mb-6 leading-[1.1] tracking-[0.08em] uppercase" style={{ color: '#00255F' }}>
+        <h1 className="text-fluid-hero font-heading font-thin mb-6 leading-[1.1] tracking-[0.08em] uppercase" style={{ color: '#00255F' }}>
           Melina
         </h1>
         
-        <p className="text-xl sm:text-2xl md:text-3xl mb-8 font-display tracking-wide" style={{ color: '#5a432b' }}>
+        <p className="text-fluid-display mb-8 font-display tracking-wide" style={{ color: '#5a432b' }}>
           Confeitaria Afetiva
         </p>
 
         {/* Separador decorativo */}
-        <div className="flex items-center justify-center mb-10">
+        <div className="flex items-center justify-center mb-6 md:mb-10">
           <Image
             src="https://res.cloudinary.com/db8aa3e8s/image/upload/v1771268615/QUEBRA_DE_P%C3%81GINA_aflrsl.png"
             alt="Separador decorativo"
             width={200}
             height={20}
-            className="object-contain"
+            className="object-contain w-[clamp(150px,15vw,200px)]"
           />
         </div>
         
-        <p className="text-base sm:text-lg md:text-xl font-body mb-10 max-w-2xl mx-auto leading-relaxed" style={{ color: '#b8a490' }}>
+        <p className="text-fluid-body-lg font-body mb-6 md:mb-10 max-w-2xl mx-auto leading-relaxed" style={{ color: '#8f7a65' }}>
           Doces que aquecem o coração e resgatam memórias.<br className="hidden sm:block" />
           Cada receita carrega o carinho e a tradição da nossa família para a sua.
         </p>
 
-        {/* Botões de ação */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-3">
+        {/* Botões de ação - sempre visíveis na tela inicial mobile */}
+        <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 mb-0 md:mb-3">
           <a
             href={getDirectPdfUrl(MENU_PDF_URL)}
             target="_blank"
@@ -101,10 +101,10 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Indicador de scroll */}
+        {/* Indicador de scroll - só no desktop, mobile não mostra */}
         <button 
           onClick={scrollToNext}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer hover:opacity-70 transition-opacity"
+          className="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer hover:opacity-70 transition-opacity"
           aria-label="Rolar para próxima seção"
         >
           <svg 

@@ -9,10 +9,58 @@
   --foreground: #8f7054;
   --font-display: 'Dancing Script', cursive;
   --font-heading: 'Young Serif', serif;
+
+  /* Sistema fluido - proporções iguais em HD, FHD, QHD, UHD */
+  --container-fluid: clamp(320px, 60vw, 2000px);
+  --text-hero: clamp(2.5rem, 4vw + 1.5rem, 6rem);
+  --text-h2: clamp(1.75rem, 1.5vw + 1rem, 3rem);
+  --text-h2-display: clamp(1.5rem, 1.2vw + 0.9rem, 2.25rem);
+  --text-body: clamp(0.875rem, 0.4vw + 0.75rem, 1.125rem);
+  --text-body-lg: clamp(1rem, 0.5vw + 0.85rem, 1.25rem);
+  --section-padding: clamp(3rem, 5vw, 6rem);
+  --section-gap: clamp(2rem, 3vw, 3rem);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Lora', serif;
+}
+
+@layer components {
+  .container-fluid {
+    width: 100%;
+    max-width: var(--container-fluid);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text-fluid-hero {
+    font-size: var(--text-hero);
+  }
+
+  .text-fluid-h2 {
+    font-size: var(--text-h2);
+  }
+
+  .text-fluid-display {
+    font-size: var(--text-h2-display);
+  }
+
+  .text-fluid-body {
+    font-size: var(--text-body);
+  }
+
+  .text-fluid-body-lg {
+    font-size: var(--text-body-lg);
+  }
+
+  .py-fluid {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+  }
+
+  .gap-fluid {
+    gap: var(--section-gap);
+  }
 }
