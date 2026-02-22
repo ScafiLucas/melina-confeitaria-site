@@ -7,8 +7,9 @@ import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://melinaconfeitaria.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.melinaconfeitaria.com.br";
 const siteName = process.env.NEXT_PUBLIC_SITE_NAME || "Melina Confeitaria Afetiva";
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -62,11 +63,11 @@ export const metadata: Metadata = {
     description: "Transforme seus momentos especiais em memórias inesquecíveis com nossos doces artesanais feitos com receitas de família. Atendemos Barão Geraldo e região de Campinas/SP.",
     images: [
       {
-        url: `${siteUrl}/og-image.jpg`,
+        url: `${siteUrl}/opengraph-image`,
         width: 1200,
         height: 630,
         alt: "Melina Confeitaria Afetiva - Doces Artesanais",
-        type: "image/jpeg",
+        type: "image/png",
       },
     ],
   },
@@ -74,7 +75,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Melina Confeitaria Afetiva | Doces Artesanais Campinas",
     description: "Confeitaria artesanal familiar em Barão Geraldo, Campinas. Cada doce carrega afeto e tradição.",
-    images: [`${siteUrl}/og-image.jpg`],
+    images: [`${siteUrl}/twitter-image`],
   },
   robots: {
     index: true,
@@ -101,10 +102,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
   },
-  verification: {
-    // Adicione seu código de verificação do Google Search Console aqui
-    google: "seu-codigo-de-verificacao-google",
-  },
+  verification: googleSiteVerification
+    ? {
+        google: googleSiteVerification,
+      }
+    : undefined,
   category: "food",
 };
 
@@ -121,7 +123,7 @@ export default function RootLayout({
     name: siteName,
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
-    image: `${siteUrl}/og-image.jpg`,
+    image: `${siteUrl}/opengraph-image`,
     description: "Confeitaria artesanal familiar em Barão Geraldo, Campinas. Doces feitos com amor e receitas de família.",
     telephone: process.env.NEXT_PUBLIC_PHONE || "(19) 97119-3794",
     email: process.env.NEXT_PUBLIC_EMAIL || "melinaconfeitariaafetiva@gmail.com",
