@@ -1,165 +1,102 @@
-# 🧁 Melina Confeitaria - Guia de Uso
+# COMO USAR (versão atual)
 
-## 📋 Passo a Passo para Configuração e Personalização
+Guia rápido para atualizar conteúdo e publicar sem quebrar layout.
 
-### 1️⃣ Instalação Inicial
+## 1) Onde editar conteúdo
 
-```bash
-cd Melina
-npm install
+Não edite os componentes para conteúdo do dia a dia.  
+Use apenas os arquivos em `data/`:
+
+- `data/site-images.ts`
+  - Logo do header
+  - Imagem de fundo do hero
+  - Divisor decorativo do hero
+  - Imagem da seção Sobre
+
+- `data/gallery-images.ts`
+  - Lista de imagens da galeria
+
+- `data/testimonials.ts`
+  - Lista de depoimentos
+
+Detalhes: `data/README.md`.
+
+## 2) Como atualizar imagens
+
+### Imagens fixas (logo/hero/sobre)
+Arquivo: `data/site-images.ts`
+
+Troque apenas as URLs:
+
+```ts
+export const siteImages = {
+  navbarLogo: "URL_DA_LOGO",
+  heroBackground: "URL_DO_FUNDO_HERO",
+  heroDivider: "URL_DO_DIVISOR",
+  aboutImage: "URL_DA_IMAGEM_SOBRE",
+};
 ```
 
-### 2️⃣ Configurar Variáveis de Ambiente
+### Galeria
+Arquivo: `data/gallery-images.ts`
 
-1. Copie o arquivo `.env.example` para `.env`
-2. Configure suas variáveis:
-   - `NEXT_PUBLIC_CALENDLY_URL` - Seu link do Calendly
-   - `NEXT_PUBLIC_SITE_NAME` - Nome do seu site
-   - `NEXT_PUBLIC_SITE_URL` - URL do seu domínio
+Cada item:
 
-### 3️⃣ Personalizar Conteúdo
+```ts
+{
+  url: "https://...",
+  alt: "Descrição da imagem"
+}
+```
 
-#### **Logo e Nome**
-- `components/Navbar.tsx` - Linha 21: Altere "Seu Logo"
-- `components/Footer.tsx` - Linha 34: Altere "Seu Logo"
+- Adicionar: copiar um objeto e colar no fim da lista
+- Editar: mudar `url` e/ou `alt`
+- Remover: apagar o objeto
 
-#### **Metadata e SEO**
-- `app/layout.tsx` - Linhas 10-38: Altere title, description, keywords, etc.
+## 3) Como atualizar depoimentos
 
-#### **Hero (Seção Principal)**
-- `components/Hero.tsx`:
-  - Linha 15-18: Título principal
-  - Linha 21: Descrição
-  - Linha 29: Texto do botão principal
+Arquivo: `data/testimonials.ts`
 
-#### **Sobre**
-- `components/About.tsx`:
-  - Linha 18: Título da seção
-  - Linhas 19-26: Textos descritivos
-  - Linhas 4-9: Lista de características/benefícios
-  - Linha 40: URL da imagem
+Cada item:
 
-#### **Galeria**
-- `components/Gallery.tsx`:
-  - Linhas 3-26: Array de imagens (substitua as URLs do Unsplash pelas suas)
-  - Linha 35: Título
-  - Linha 37: Descrição
+```ts
+{
+  name: "Nome",
+  text: "Depoimento",
+  rating: 5
+}
+```
 
-#### **Footer**
-- `components/Footer.tsx`:
-  - Linha 34: Nome/Logo
-  - Linha 35: Descrição breve
-  - Linhas 55-65: Email, telefone e endereço
-  - Linhas 15-20: Links de redes sociais
+- `rating` deve ficar entre `0` e `5`
+- Para quebra de linha dentro do texto, use `\n`
 
-### 4️⃣ Personalizar Cores
+## 4) Publicar mudanças
 
-Edite `tailwind.config.ts` para mudar o esquema de cores. As cores principais usam a paleta `indigo`.
+### Opção A — GitHub Web (sem terminal)
+1. Acesse o repositório no GitHub.
+2. Abra o arquivo em `data/`.
+3. Clique em **Edit** (ícone de lápis).
+4. Salve em **Commit changes** na branch `main`.
+5. A Vercel faz deploy automático.
 
-Para mudar, substitua todas as ocorrências de `indigo` por outra cor:
-- `blue`, `purple`, `pink`, `red`, `orange`, `amber`, `yellow`, `lime`, `green`, `emerald`, `teal`, `cyan`, `sky`, etc.
+### Opção B — Local (terminal)
+```bash
+git add .
+git commit -m "Atualiza conteúdo"
+git push origin main
+```
 
-### 5️⃣ Adicionar/Remover Seções
+## 5) Conferência rápida após deploy
 
-#### Adicionar nova seção:
-1. Crie um novo componente em `components/MinhaSecao.tsx`
-2. Importe e adicione em `app/page.tsx`
+- Verificar se os cards da galeria/depoimentos carregam com as novas imagens/textos
+- Verificar mobile (iPhone/Android) e desktop
+- Verificar se links de WhatsApp/Instagram/Cardápio continuam corretos
 
-#### Remover seção:
-1. Remova a importação em `app/page.tsx`
-2. Remova o componente da pasta `components/`
-3. Remova o link da navegação em `components/Navbar.tsx`
-
-### 6️⃣ Rodar o Projeto
+## 6) Desenvolvimento local (quando precisar)
 
 ```bash
+npm install
 npm run dev
 ```
 
-Acesse: http://localhost:3000
-
-### 7️⃣ Build para Produção
-
-```bash
-npm run build
-npm start
-```
-
-## 🎯 Dicas de Personalização
-
-### Imagens
-- Substitua as URLs do Unsplash pelas suas próprias imagens
-- Coloque suas imagens em `public/` e use `/sua-imagem.jpg`
-- Ou use serviços como Cloudinary, ImageKit, etc.
-
-### Fontes
-- A fonte padrão é Inter (Google Fonts)
-- Para mudar, edite `app/layout.tsx` linha 7
-
-### Dark Mode
-- Já está configurado e funcionando!
-- Usa o ThemeProvider para gerenciar o tema
-- Botão de toggle no Navbar
-
-### Responsividade
-- Todos os componentes são responsivos
-- Testados em mobile, tablet e desktop
-
-## 📦 Estrutura de Arquivos
-
-```
-Melina/
-├── app/
-│   ├── layout.tsx      # Layout principal + metadata
-│   ├── page.tsx        # Página inicial (Home)
-│   └── globals.css     # Estilos globais
-├── components/
-│   ├── Navbar.tsx      # Navegação + dark mode
-│   ├── Hero.tsx        # Seção hero principal
-│   ├── About.tsx       # Seção sobre
-│   ├── Gallery.tsx     # Galeria de imagens
-│   ├── Footer.tsx      # Rodapé + contatos
-│   ├── ThemeProvider.tsx  # Context para tema
-│   └── Providers.tsx   # Wrapper de providers
-└── public/             # Imagens e arquivos estáticos
-```
-
-## 🚀 Deploy
-
-### Vercel (Recomendado)
-1. Faça push do código para GitHub
-2. Conecte no Vercel
-3. Deploy automático!
-
-### Netlify
-1. Faça push para GitHub
-2. Conecte no Netlify
-3. Configure: Build command: `npm run build`, Publish directory: `.next`
-
-## ❓ Dúvidas Comuns
-
-**Q: Como adicionar mais páginas?**  
-A: Crie novas pastas em `app/` (ex: `app/blog/page.tsx`)
-
-**Q: Como adicionar formulário de contato?**  
-A: Use Formspree, EmailJS ou API Routes do Next.js
-
-**Q: Como mudar o favicon?**  
-A: Adicione `favicon.ico` em `app/`
-
-## 📝 Checklist de Personalização
-
-- [ ] Logo e nome do site
-- [ ] Metadata (title, description, keywords)
-- [ ] Hero (título, descrição, botões)
-- [ ] Seção Sobre (textos, características, imagem)
-- [ ] Galeria (substituir imagens)
-- [ ] Footer (contatos, redes sociais)
-- [ ] Links do Calendly
-- [ ] Cores (se quiser mudar)
-- [ ] Favicon e Open Graph image
-- [ ] Variáveis de ambiente (.env)
-
-## 🎉 Pronto!
-
-Agora é só personalizar com seu conteúdo e colocar no ar!
+URL local: `http://localhost:3000`
