@@ -2,12 +2,11 @@
 
 import { Star, Quote } from "lucide-react";
 import { useRef, useState, useEffect, type MouseEvent } from "react";
-import testimonialsData from "@/data/testimonials.json";
+import { testimonials } from "@/data/testimonials";
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
-
-type Testimonial = { name: string; text: string; rating: number };
-const testimonials = testimonialsData as Testimonial[];
+// Para editar depoimentos sem mexer no componente:
+// atualize apenas data/testimonials.ts
 
 export default function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null);

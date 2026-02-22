@@ -1,4 +1,6 @@
 import { Heart, Home, Cookie, Sparkles } from "lucide-react";
+import { siteImages } from "@/data/site-images";
+// Para trocar a imagem desta seção, edite data/site-images.ts
 
 const features = [
   {
@@ -57,7 +59,7 @@ export default function About() {
           <div className="relative">
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-chocolate-200 to-amber-200 overflow-hidden shadow-2xl">
               <img
-                src="https://res.cloudinary.com/db8aa3e8s/image/upload/v1771284539/WhatsApp_Image_2026-02-16_at_20.27.54_ldpzwu.jpg"
+                src={siteImages.aboutImage}
                 alt="Confeitaria Melina - Ambiente familiar"
                 className="w-full h-full object-cover"
               />

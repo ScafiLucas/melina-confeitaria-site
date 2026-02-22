@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, BookOpen, Instagram } from "lucide-react";
 import Image from "next/image";
+import { siteImages } from "@/data/site-images";
+// Para trocar a logo, edite data/site-images.ts
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
 const INSTAGRAM_URL = process.env.NEXT_PUBLIC_INSTAGRAM || "https://www.instagram.com/melina_confeitariaafetiva/";
@@ -46,7 +48,7 @@ export default function Navbar() {
           >
             <div className="relative h-12">
               <Image
-                src="https://res.cloudinary.com/db8aa3e8s/image/upload/v1771269936/LOGO_REDUZIDO_iwdk3b.png"
+                src={siteImages.navbarLogo}
                 alt="Melina Confeitaria"
                 width={128}
                 height={54}

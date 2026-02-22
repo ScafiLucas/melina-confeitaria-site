@@ -1,47 +1,13 @@
 "use client";
 
 import { useRef, useState, useEffect, type MouseEvent } from "react";
+import { galleryImages } from "@/data/gallery-images";
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
 
-const images = [
-  {
-    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771283317/WhatsApp_Image_2026-02-16_at_18.55.33_gfgc3s.jpg",
-    alt: "Doces e Bolos Festivos",
-  },
-  {
-    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771283318/WhatsApp_Image_2026-02-16_at_18.55.27_cxlnpv.jpg",
-    alt: "Presentes e Mimos",
-  },
-  {
-    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771283316/WhatsApp_Image_2026-02-16_at_18.55.36_g8ozht.jpg",
-    alt: "Bolos para o Dia-a-Dia",
-  },
-  {
-    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771283938/WhatsApp_Image_2026-02-16_at_20.18.24_ee5lav.jpg",
-    alt: "Cookies",
-  },
-  {
-    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771283842/WhatsApp_Image_2026-02-16_at_17.16.53_cadipk.jpg",
-    alt: "Bolos Especiais",
-  },
-  {
-    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771283316/WhatsApp_Image_2026-02-16_at_18.55.37_lybc7t.jpg",
-    alt: "Docinhos",
-  },
-  {
-    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771284313/WhatsApp_Image_2026-02-16_at_20.24.42_xeiyav.jpg",
-    alt: "Bolos Interativos",
-  },
-  {
-    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771284315/WhatsApp_Image_2026-02-16_at_18.24.33_a0dshj.jpg",
-    alt: "Bolos Caseiros",
-  },
-  {
-    url: "https://res.cloudinary.com/db8aa3e8s/image/upload/v1771284539/WhatsApp_Image_2026-02-16_at_20.28.17_rgzllx.jpg",
-    alt: "Bolos Personalizados",
-  },
-];
+// Para editar a galeria sem mexer no componente:
+// atualize apenas data/gallery-images.ts
+const images = galleryImages;
 
 export default function Gallery() {
   const scrollRef = useRef<HTMLDivElement>(null);

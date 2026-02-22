@@ -76,6 +76,48 @@ npm start
 - **Imagens**: Adicione suas fotos de produtos na galeria
 - **Metadata**: Configure SEO em `app/layout.tsx`
 
+## ✍️ Atualização de conteúdo (sem mexer nos componentes)
+
+Para o time atualizar conteúdos com segurança, use os arquivos de dados em `data/`:
+
+- `data/site-images.ts` → imagens fixas (logo/hero/sobre)
+- `data/gallery-images.ts` → imagens da seção Galeria
+- `data/testimonials.ts` → depoimentos da seção Testimonials
+- `data/README.md` → guia completo de edição para o time
+
+### Como atualizar a galeria
+
+Abra `data/gallery-images.ts` e mantenha este formato para cada item:
+
+```ts
+{
+  url: "https://link-da-imagem.jpg",
+  alt: "Descrição da imagem"
+}
+```
+
+- **Adicionar imagem**: cole um novo objeto na lista
+- **Editar imagem**: altere `url` e/ou `alt`
+- **Remover imagem**: apague o objeto inteiro
+
+### Como atualizar depoimentos
+
+Abra `data/testimonials.ts` e mantenha este formato:
+
+```ts
+{
+  name: "Nome da pessoa",
+  text: "Texto do depoimento",
+  rating: 5
+}
+```
+
+- **Adicionar comentário**: adicione novo objeto na lista
+- **Editar comentário**: altere `name`, `text` ou `rating`
+- **Remover comentário**: apague o objeto inteiro
+
+> Dica: use sempre o mesmo formato dos itens existentes para evitar erro de sintaxe.
+
 ## 📄 Licença
 
 MIT
