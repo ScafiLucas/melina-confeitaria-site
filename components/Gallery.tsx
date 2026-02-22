@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, type MouseEvent } from "react";
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
 
@@ -46,6 +46,9 @@ const images = [
 export default function Gallery() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const isDraggingRef = useRef(false);
+  const dragStartXRef = useRef(0);
+  const dragStartScrollLeftRef = useRef(0);
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -64,6 +67,23 @@ export default function Gallery() {
     handleScroll();
     return () => el.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleMouseDown = (event: MouseEvent<HTMLDivElement>) => {
+    isDraggingRef.current = true;
+    dragStartXRef.current = event.pageX;
+    dragStartScrollLeftRef.current = event.currentTarget.scrollLeft;
+  };
+
+  const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
+    if (!isDraggingRef.current) return;
+    event.preventDefault();
+    const deltaX = event.pageX - dragStartXRef.current;
+    event.currentTarget.scrollLeft = dragStartScrollLeftRef.current - deltaX;
+  };
+
+  const stopDragging = () => {
+    isDraggingRef.current = false;
+  };
 
   return (
     <section
@@ -85,7 +105,11 @@ export default function Gallery() {
         <div className="relative">
           <div
             ref={scrollRef}
-            className="flex overflow-x-auto snap-x snap-mandatory gap-4 -mx-4 pl-4 pr-4 pb-2 md:mx-0 md:pl-0 md:pr-0 md:pb-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-[clamp(1rem,2vw,1.5rem)] scroll-smooth [scrollbar-width:none] [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden"
+            className="flex overflow-x-auto snap-x snap-mandatory gap-4 -mx-4 pl-4 pr-4 pb-2 md:mx-0 md:pl-0 md:pr-0 md:pb-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-[clamp(1rem,2vw,1.5rem)] scroll-smooth select-none cursor-grab active:cursor-grabbing [scrollbar-width:none] [-webkit-overflow-scrolling:touch] [touch-action:pan-x] [&::-webkit-scrollbar]:hidden"
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={stopDragging}
+            onMouseLeave={stopDragging}
           >
             {images.map((image, idx) => (
               <div
@@ -97,6 +121,7 @@ export default function Gallery() {
                 src={image.url}
                 alt={image.alt}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                draggable={false}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-chocolate-900/80 via-chocolate-900/0 to-chocolate-900/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4">

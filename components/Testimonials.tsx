@@ -1,7 +1,7 @@
 "use client";
 
 import { Star, Quote } from "lucide-react";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, type MouseEvent } from "react";
 import testimonialsData from "@/data/testimonials.json";
 
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "5519971193794";
@@ -12,6 +12,9 @@ const testimonials = testimonialsData as Testimonial[];
 export default function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const isDraggingRef = useRef(false);
+  const dragStartXRef = useRef(0);
+  const dragStartScrollLeftRef = useRef(0);
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -29,6 +32,23 @@ export default function Testimonials() {
     handleScroll();
     return () => el.removeEventListener("scroll", handleScroll);
   }, [testimonials.length]);
+
+  const handleMouseDown = (event: MouseEvent<HTMLDivElement>) => {
+    isDraggingRef.current = true;
+    dragStartXRef.current = event.pageX;
+    dragStartScrollLeftRef.current = event.currentTarget.scrollLeft;
+  };
+
+  const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
+    if (!isDraggingRef.current) return;
+    event.preventDefault();
+    const deltaX = event.pageX - dragStartXRef.current;
+    event.currentTarget.scrollLeft = dragStartScrollLeftRef.current - deltaX;
+  };
+
+  const stopDragging = () => {
+    isDraggingRef.current = false;
+  };
 
   return (
     <section
@@ -50,8 +70,12 @@ export default function Testimonials() {
           {/* Carrossel horizontal puro (igual comportamento da Galeria) */}
           <div
             ref={scrollRef}
-            className="flex overflow-x-auto snap-x snap-mandatory gap-5 -mx-4 pl-4 pr-4 pt-2 pb-4 md:mx-0 md:pl-0 md:pr-6 md:pb-6 scroll-smooth [scrollbar-width:none] [-webkit-overflow-scrolling:touch] [touch-action:pan-x] [&::-webkit-scrollbar]:hidden"
+            className="flex overflow-x-auto snap-x snap-mandatory gap-5 -mx-4 pl-4 pr-4 pt-2 pb-4 md:mx-0 md:pl-0 md:pr-6 md:pb-6 scroll-smooth select-none cursor-grab active:cursor-grabbing [scrollbar-width:none] [-webkit-overflow-scrolling:touch] [touch-action:pan-x] [&::-webkit-scrollbar]:hidden"
             style={{ scrollPaddingInline: "1rem" }}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={stopDragging}
+            onMouseLeave={stopDragging}
           >
             {testimonials.map((testimonial, idx) => (
               <div
